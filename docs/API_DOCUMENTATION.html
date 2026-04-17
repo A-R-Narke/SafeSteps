@@ -1,0 +1,622 @@
+<!DOCTYPE html><html><head>
+      <title>API_DOCUMENTATION</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\adity\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="saferoute---api-documentation">SafeRoute - API Documentation </h1>
+<p>Complete reference for all external APIs and internal services used in the SafeRoute application.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents </h2>
+<ol>
+<li><a href="#google-maps-apis">Google Maps APIs</a></li>
+<li><a href="#twilio-whatsapp-api">Twilio WhatsApp API</a></li>
+<li><a href="#firebase-apis">Firebase APIs</a></li>
+<li><a href="#internal-services">Internal Services</a></li>
+</ol>
+<hr>
+<h2 id="google-maps-apis">Google Maps APIs </h2>
+<h3 id="1-google-directions-api">1. Google Directions API </h3>
+<p><strong>Purpose:</strong> Calculate routes between two locations with turn-by-turn directions.</p>
+<p><strong>Endpoint:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>GET https://maps.googleapis.com/maps/api/directions/json
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>origin</code> (required): Starting location (lat,lng or address)</li>
+<li><code>destination</code> (required): Ending location (lat,lng or address)</li>
+<li><code>mode</code> (optional): Travel mode (driving, walking, bicycling, transit)</li>
+<li><code>alternatives</code> (optional): Return multiple routes (true/false)</li>
+<li><code>key</code> (required): API key</li>
+</ul>
+<p><strong>Example Request:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> origin <span class="token operator">=</span> <span class="token string">"37.7749,-122.4194"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> destination <span class="token operator">=</span> <span class="token string">"37.8044,-122.2712"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> apiKey <span class="token operator">=</span> <span class="token string">"YOUR_API_KEY"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://maps.googleapis.com/maps/api/directions/json?origin=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>origin<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;destination=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>destination<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;mode=walking&amp;alternatives=true&amp;key=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>apiKey<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> response<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Input:</strong></p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"origin"</span><span class="token operator">:</span> <span class="token string">"37.7749,-122.4194"</span><span class="token punctuation">,</span>
+  <span class="token property">"destination"</span><span class="token operator">:</span> <span class="token string">"37.8044,-122.2712"</span><span class="token punctuation">,</span>
+  <span class="token property">"mode"</span><span class="token operator">:</span> <span class="token string">"walking"</span><span class="token punctuation">,</span>
+  <span class="token property">"alternatives"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"AIza..."</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"routes"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"legs"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">"distance"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"12.5 km"</span><span class="token punctuation">,</span>
+            <span class="token property">"value"</span><span class="token operator">:</span> <span class="token number">12500</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">"duration"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"2 hours 30 mins"</span><span class="token punctuation">,</span>
+            <span class="token property">"value"</span><span class="token operator">:</span> <span class="token number">9000</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">"start_location"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"lat"</span><span class="token operator">:</span> <span class="token number">37.7749</span><span class="token punctuation">,</span>
+            <span class="token property">"lng"</span><span class="token operator">:</span> <span class="token number">-122.4194</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">"end_location"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"lat"</span><span class="token operator">:</span> <span class="token number">37.8044</span><span class="token punctuation">,</span>
+            <span class="token property">"lng"</span><span class="token operator">:</span> <span class="token number">-122.2712</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">"steps"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">"distance"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"0.2 km"</span><span class="token punctuation">,</span> <span class="token property">"value"</span><span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token property">"duration"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"3 mins"</span><span class="token punctuation">,</span> <span class="token property">"value"</span><span class="token operator">:</span> <span class="token number">180</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token property">"html_instructions"</span><span class="token operator">:</span> <span class="token string">"Head &lt;b&gt;north&lt;/b&gt; on &lt;b&gt;Market St&lt;/b&gt;"</span><span class="token punctuation">,</span>
+              <span class="token property">"polyline"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"points"</span><span class="token operator">:</span> <span class="token string">"encoded_polyline_string"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token property">"start_location"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"lat"</span><span class="token operator">:</span> <span class="token number">37.7749</span><span class="token punctuation">,</span> <span class="token property">"lng"</span><span class="token operator">:</span> <span class="token number">-122.4194</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token property">"end_location"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"lat"</span><span class="token operator">:</span> <span class="token number">37.7769</span><span class="token punctuation">,</span> <span class="token property">"lng"</span><span class="token operator">:</span> <span class="token number">-122.4194</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token property">"travel_mode"</span><span class="token operator">:</span> <span class="token string">"WALKING"</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"overview_polyline"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"points"</span><span class="token operator">:</span> <span class="token string">"encoded_overview_polyline"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">"summary"</span><span class="token operator">:</span> <span class="token string">"Market St and Bay Bridge"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"status"</span><span class="token operator">:</span> <span class="token string">"OK"</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Usage in SafeRoute:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">fetchDirections</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">origin<span class="token punctuation">,</span> destination</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://maps.googleapis.com/maps/api/directions/json?origin=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>origin<span class="token punctuation">.</span><span class="token property-access">latitude</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>origin<span class="token punctuation">.</span><span class="token property-access">longitude</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;destination=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>destination<span class="token punctuation">.</span><span class="token property-access">latitude</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>destination<span class="token punctuation">.</span><span class="token property-access">longitude</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;mode=walking&amp;alternatives=true&amp;key=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">GOOGLE_DIRECTIONS_API_KEY</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> response<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token property-access">status</span> <span class="token operator">===</span> <span class="token string">"OK"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> routes <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token property-access">routes</span><span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token parameter">route</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">coordinates</span><span class="token operator">:</span> <span class="token function">decodePolyline</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span><span class="token property-access">overview_polyline</span><span class="token punctuation">.</span><span class="token property-access">points</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">distance</span><span class="token operator">:</span> route<span class="token punctuation">.</span><span class="token property-access">legs</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">distance</span><span class="token punctuation">.</span><span class="token property-access">value</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">duration</span><span class="token operator">:</span> route<span class="token punctuation">.</span><span class="token property-access">legs</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">duration</span><span class="token punctuation">.</span><span class="token property-access">value</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">steps</span><span class="token operator">:</span> route<span class="token punctuation">.</span><span class="token property-access">legs</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">steps</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-return">return</span> routes<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h3 id="2-google-places-api-text-search">2. Google Places API (Text Search) </h3>
+<p><strong>Purpose:</strong> Search for places by text query.</p>
+<p><strong>Endpoint:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>GET https://maps.googleapis.com/maps/api/place/textsearch/json
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query</code> (required): Search query string</li>
+<li><code>location</code> (optional): Lat,lng to bias results</li>
+<li><code>radius</code> (optional): Search radius in meters</li>
+<li><code>key</code> (required): API key</li>
+</ul>
+<p><strong>Example Request:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> query <span class="token operator">=</span> <span class="token string">"coffee shops near me"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> <span class="token dom variable">location</span> <span class="token operator">=</span> <span class="token string">"37.7749,-122.4194"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> radius <span class="token operator">=</span> <span class="token number">5000</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> apiKey <span class="token operator">=</span> <span class="token string">"YOUR_API_KEY"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://maps.googleapis.com/maps/api/place/textsearch/json?query=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;location=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token dom variable">location</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;radius=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>radius<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;key=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>apiKey<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> response<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Input:</strong></p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"query"</span><span class="token operator">:</span> <span class="token string">"hospitals in San Francisco"</span><span class="token punctuation">,</span>
+  <span class="token property">"location"</span><span class="token operator">:</span> <span class="token string">"37.7749,-122.4194"</span><span class="token punctuation">,</span>
+  <span class="token property">"radius"</span><span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span>
+  <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"AIza..."</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"results"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"formatted_address"</span><span class="token operator">:</span> <span class="token string">"1001 Potrero Ave, San Francisco, CA 94110"</span><span class="token punctuation">,</span>
+      <span class="token property">"geometry"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"location"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">"lat"</span><span class="token operator">:</span> <span class="token number">37.7577</span><span class="token punctuation">,</span>
+          <span class="token property">"lng"</span><span class="token operator">:</span> <span class="token number">-122.4076</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"San Francisco General Hospital"</span><span class="token punctuation">,</span>
+      <span class="token property">"place_id"</span><span class="token operator">:</span> <span class="token string">"ChIJd8BlQ2B..."</span><span class="token punctuation">,</span>
+      <span class="token property">"rating"</span><span class="token operator">:</span> <span class="token number">3.8</span><span class="token punctuation">,</span>
+      <span class="token property">"types"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"hospital"</span><span class="token punctuation">,</span> <span class="token string">"health"</span><span class="token punctuation">,</span> <span class="token string">"point_of_interest"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"status"</span><span class="token operator">:</span> <span class="token string">"OK"</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Usage in SafeRoute:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">searchPlaces</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">searchQuery</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://maps.googleapis.com/maps/api/place/textsearch/json?query=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>searchQuery<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;key=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">GOOGLE_PLACES_API_KEY</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> response<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token property-access">status</span> <span class="token operator">===</span> <span class="token string">"OK"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> data<span class="token punctuation">.</span><span class="token property-access">results</span><span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token parameter">place</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> place<span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">address</span><span class="token operator">:</span> place<span class="token punctuation">.</span><span class="token property-access">formatted_address</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">latitude</span><span class="token operator">:</span> place<span class="token punctuation">.</span><span class="token property-access">geometry</span><span class="token punctuation">.</span><span class="token property-access">location</span><span class="token punctuation">.</span><span class="token property-access">lat</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">longitude</span><span class="token operator">:</span> place<span class="token punctuation">.</span><span class="token property-access">geometry</span><span class="token punctuation">.</span><span class="token property-access">location</span><span class="token punctuation">.</span><span class="token property-access">lng</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">placeId</span><span class="token operator">:</span> place<span class="token punctuation">.</span><span class="token property-access">place_id</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h3 id="3-google-places-api-autocomplete">3. Google Places API (Autocomplete) </h3>
+<p><strong>Purpose:</strong> Get place predictions as user types.</p>
+<p><strong>Endpoint:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>GET https://maps.googleapis.com/maps/api/place/autocomplete/json
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>input</code> (required): User input text</li>
+<li><code>location</code> (optional): Lat,lng to bias results</li>
+<li><code>radius</code> (optional): Search radius in meters</li>
+<li><code>types</code> (optional): Filter by place types</li>
+<li><code>key</code> (required): API key</li>
+</ul>
+<p><strong>Example Request:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> input <span class="token operator">=</span> <span class="token string">"Golden Gate"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> <span class="token dom variable">location</span> <span class="token operator">=</span> <span class="token string">"37.7749,-122.4194"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> apiKey <span class="token operator">=</span> <span class="token string">"YOUR_API_KEY"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://maps.googleapis.com/maps/api/place/autocomplete/json?input=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;location=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token dom variable">location</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;radius=50000&amp;key=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>apiKey<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> response<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Input:</strong></p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"input"</span><span class="token operator">:</span> <span class="token string">"Golden Gate"</span><span class="token punctuation">,</span>
+  <span class="token property">"location"</span><span class="token operator">:</span> <span class="token string">"37.7749,-122.4194"</span><span class="token punctuation">,</span>
+  <span class="token property">"radius"</span><span class="token operator">:</span> <span class="token number">50000</span><span class="token punctuation">,</span>
+  <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"AIza..."</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"predictions"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Golden Gate Bridge, San Francisco, CA, USA"</span><span class="token punctuation">,</span>
+      <span class="token property">"place_id"</span><span class="token operator">:</span> <span class="token string">"ChIJw____96GhYAR..."</span><span class="token punctuation">,</span>
+      <span class="token property">"structured_formatting"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"main_text"</span><span class="token operator">:</span> <span class="token string">"Golden Gate Bridge"</span><span class="token punctuation">,</span>
+        <span class="token property">"secondary_text"</span><span class="token operator">:</span> <span class="token string">"San Francisco, CA, USA"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"status"</span><span class="token operator">:</span> <span class="token string">"OK"</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="twilio-whatsapp-api">Twilio WhatsApp API </h2>
+<h3 id="send-whatsapp-message">Send WhatsApp Message </h3>
+<p><strong>Purpose:</strong> Send emergency alerts and location updates via WhatsApp.</p>
+<p><strong>Endpoint:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>POST https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Messages.json
+</code></pre><p><strong>Authentication:</strong> Basic Auth with Account SID and Auth Token</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>From</code> (required): Twilio WhatsApp number (whatsapp:+14155238886)</li>
+<li><code>To</code> (required): Recipient WhatsApp number</li>
+<li><code>Body</code> (required): Message text</li>
+</ul>
+<p><strong>Example Request:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> accountSid <span class="token operator">=</span> <span class="token string">"AC..."</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> authToken <span class="token operator">=</span> <span class="token string">"your_auth_token"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> fromNumber <span class="token operator">=</span> <span class="token string">"whatsapp:+14155238886"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> toNumber <span class="token operator">=</span> <span class="token string">"whatsapp:+1234567890"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> message <span class="token operator">=</span> <span class="token string">"🚨 EMERGENCY ALERT: User needs help!"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://api.twilio.com/2010-04-01/Accounts/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>accountSid<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/Messages.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">"Authorization"</span><span class="token operator">:</span> <span class="token string">"Basic "</span> <span class="token operator">+</span> <span class="token function">btoa</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>accountSid<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>authToken<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"Content-Type"</span><span class="token operator">:</span> <span class="token string">"application/x-www-form-urlencoded"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">From</span><span class="token operator">:</span> fromNumber<span class="token punctuation">,</span>
+    <span class="token literal-property property">To</span><span class="token operator">:</span> toNumber<span class="token punctuation">,</span>
+    <span class="token literal-property property">Body</span><span class="token operator">:</span> message
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Input:</strong></p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"From"</span><span class="token operator">:</span> <span class="token string">"whatsapp:+14155238886"</span><span class="token punctuation">,</span>
+  <span class="token property">"To"</span><span class="token operator">:</span> <span class="token string">"whatsapp:+1234567890"</span><span class="token punctuation">,</span>
+  <span class="token property">"Body"</span><span class="token operator">:</span> <span class="token string">"🚨 EMERGENCY ALERT: John needs help!"</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"sid"</span><span class="token operator">:</span> <span class="token string">"SM..."</span><span class="token punctuation">,</span>
+  <span class="token property">"status"</span><span class="token operator">:</span> <span class="token string">"queued"</span><span class="token punctuation">,</span>
+  <span class="token property">"body"</span><span class="token operator">:</span> <span class="token string">"🚨 EMERGENCY ALERT: John needs help!"</span><span class="token punctuation">,</span>
+  <span class="token property">"to"</span><span class="token operator">:</span> <span class="token string">"whatsapp:+1234567890"</span><span class="token punctuation">,</span>
+  <span class="token property">"from"</span><span class="token operator">:</span> <span class="token string">"whatsapp:+14155238886"</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Usage in SafeRoute:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> <span class="token function-variable function">sendEmergencyAlert</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">contact<span class="token punctuation">,</span> userLocation<span class="token punctuation">,</span> userName</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> accountSid <span class="token operator">=</span> process<span class="token punctuation">.</span><span class="token property-access">env</span><span class="token punctuation">.</span><span class="token constant">EXPO_PUBLIC_TWILIO_ACCOUNT_SID</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> authToken <span class="token operator">=</span> process<span class="token punctuation">.</span><span class="token property-access">env</span><span class="token punctuation">.</span><span class="token constant">EXPO_PUBLIC_TWILIO_AUTH_TOKEN</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-const">const</span> message <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">🚨 EMERGENCY ALERT\n\n</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> needs help!\n\nLocation: https://maps.google.com/?q=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userLocation<span class="token punctuation">.</span><span class="token property-access">latitude</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userLocation<span class="token punctuation">.</span><span class="token property-access">longitude</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-const">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://api.twilio.com/2010-04-01/Accounts/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>accountSid<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/Messages.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">"Authorization"</span><span class="token operator">:</span> <span class="token string">"Basic "</span> <span class="token operator">+</span> <span class="token function">btoa</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>accountSid<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>authToken<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string-property property">"Content-Type"</span><span class="token operator">:</span> <span class="token string">"application/x-www-form-urlencoded"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">From</span><span class="token operator">:</span> process<span class="token punctuation">.</span><span class="token property-access">env</span><span class="token punctuation">.</span><span class="token constant">EXPO_PUBLIC_TWILIO_WHATSAPP_NUMBER</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">To</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">whatsapp:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>contact<span class="token punctuation">.</span><span class="token property-access">phone</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token literal-property property">Body</span><span class="token operator">:</span> message
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token keyword control-flow keyword-await">await</span> response<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="firebase-apis">Firebase APIs </h2>
+<h3 id="1-firestore---add-safety-review">1. Firestore - Add Safety Review </h3>
+<p><strong>Purpose:</strong> Store community safety reviews.</p>
+<p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> collection<span class="token punctuation">,</span> addDoc<span class="token punctuation">,</span> serverTimestamp <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"firebase/firestore"</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> db <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"@/config/firebase"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">addSafetyReview</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">reviewData</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> docRef <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">addDoc</span><span class="token punctuation">(</span><span class="token function">collection</span><span class="token punctuation">(</span>db<span class="token punctuation">,</span> <span class="token string">"safety_reviews"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">latitude</span><span class="token operator">:</span> reviewData<span class="token punctuation">.</span><span class="token property-access">latitude</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">longitude</span><span class="token operator">:</span> reviewData<span class="token punctuation">.</span><span class="token property-access">longitude</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">rating</span><span class="token operator">:</span> reviewData<span class="token punctuation">.</span><span class="token property-access">rating</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">comment</span><span class="token operator">:</span> reviewData<span class="token punctuation">.</span><span class="token property-access">comment</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">category</span><span class="token operator">:</span> reviewData<span class="token punctuation">.</span><span class="token property-access">category</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">userId</span><span class="token operator">:</span> reviewData<span class="token punctuation">.</span><span class="token property-access">userId</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">createdAt</span><span class="token operator">:</span> <span class="token function">serverTimestamp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> docRef<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Input:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7749</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4194</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">rating</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">comment</span><span class="token operator">:</span> <span class="token string">"Well-lit area with good foot traffic"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">category</span><span class="token operator">:</span> <span class="token string">"lighting"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">userId</span><span class="token operator">:</span> <span class="token string">"user123"</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">"review_abc123"</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h3 id="2-firestore---query-safety-reviews">2. Firestore - Query Safety Reviews </h3>
+<p><strong>Purpose:</strong> Retrieve safety reviews for a specific area.</p>
+<p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> collection<span class="token punctuation">,</span> query<span class="token punctuation">,</span> where<span class="token punctuation">,</span> getDocs <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"firebase/firestore"</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> db <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"@/config/firebase"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">getSafetyReviews</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">latitude<span class="token punctuation">,</span> longitude<span class="token punctuation">,</span> radiusKm <span class="token operator">=</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> latDelta <span class="token operator">=</span> radiusKm <span class="token operator">/</span> <span class="token number">111</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-const">const</span> reviewsRef <span class="token operator">=</span> <span class="token function">collection</span><span class="token punctuation">(</span>db<span class="token punctuation">,</span> <span class="token string">"safety_reviews"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> q <span class="token operator">=</span> <span class="token function">query</span><span class="token punctuation">(</span>
+    reviewsRef<span class="token punctuation">,</span>
+    <span class="token function">where</span><span class="token punctuation">(</span><span class="token string">"latitude"</span><span class="token punctuation">,</span> <span class="token string">"&gt;="</span><span class="token punctuation">,</span> latitude <span class="token operator">-</span> latDelta<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">where</span><span class="token punctuation">(</span><span class="token string">"latitude"</span><span class="token punctuation">,</span> <span class="token string">"&lt;="</span><span class="token punctuation">,</span> latitude <span class="token operator">+</span> latDelta<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-const">const</span> querySnapshot <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">getDocs</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> reviews <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  
+  querySnapshot<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">doc</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    reviews<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> doc<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">,</span> <span class="token spread operator">...</span>doc<span class="token punctuation">.</span><span class="token method function property-access">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-return">return</span> reviews<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">"review_abc123"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7749</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4194</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">rating</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">comment</span><span class="token operator">:</span> <span class="token string">"Well-lit area"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">category</span><span class="token operator">:</span> <span class="token string">"lighting"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">userId</span><span class="token operator">:</span> <span class="token string">"user123"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre><hr>
+<h3 id="3-realtime-database---share-live-location">3. Realtime Database - Share Live Location </h3>
+<p><strong>Purpose:</strong> Share real-time location updates.</p>
+<p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> ref<span class="token punctuation">,</span> set<span class="token punctuation">,</span> onValue <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"firebase/database"</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> realtimeDb <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"@/config/firebase"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">startLocationSharing</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">sessionId<span class="token punctuation">,</span> userId<span class="token punctuation">,</span> <span class="token dom variable">location</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> locationRef <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span>realtimeDb<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">live_locations/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>sessionId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow keyword-await">await</span> <span class="token function">set</span><span class="token punctuation">(</span>locationRef<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">userId</span><span class="token operator">:</span> userId<span class="token punctuation">,</span>
+    <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">latitude</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">longitude</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">timestamp</span><span class="token operator">:</span> <span class="token known-class-name class-name">Date</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">isActive</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> sessionId <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">subscribeToLocation</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">sessionId<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> locationRef <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span>realtimeDb<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">live_locations/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>sessionId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token function">onValue</span><span class="token punctuation">(</span>locationRef<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">snapshot</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> snapshot<span class="token punctuation">.</span><span class="token method function property-access">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token function">callback</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Input:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">sessionId</span><span class="token operator">:</span> <span class="token string">"session_xyz789"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">userId</span><span class="token operator">:</span> <span class="token string">"user123"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">location</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7749</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4194</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">userId</span><span class="token operator">:</span> <span class="token string">"user123"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7749</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4194</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">timestamp</span><span class="token operator">:</span> <span class="token number">1692144000000</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">isActive</span><span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="internal-services">Internal Services </h2>
+<h3 id="1-route-safety-service---analyze-route-safety">1. Route Safety Service - Analyze Route Safety </h3>
+<p><strong>Purpose:</strong> Calculate comprehensive safety score for a route.</p>
+<p><strong>Location:</strong> <code>services/routeSafetyService.ts</code></p>
+<p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> analyzeRouteSafety <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"@/services/routeSafetyService"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> safetyAnalysis <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">analyzeRouteSafety</span><span class="token punctuation">(</span>routeCoordinates<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Input:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7749</span><span class="token punctuation">,</span> <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4194</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7750</span><span class="token punctuation">,</span> <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4195</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7751</span><span class="token punctuation">,</span> <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4196</span> <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">averageScore</span><span class="token operator">:</span> <span class="token number">7.5</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">maxScore</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">riskLevel</span><span class="token operator">:</span> <span class="token string">"low"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">factors</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">communityRating</span><span class="token operator">:</span> <span class="token number">8.2</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">incidentDensity</span><span class="token operator">:</span> <span class="token number">0.3</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">lightingScore</span><span class="token operator">:</span> <span class="token number">7.8</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">crowdScore</span><span class="token operator">:</span> <span class="token number">6.9</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">warnings</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">location</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7750</span><span class="token punctuation">,</span> <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4195</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">"Low lighting reported"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">severity</span><span class="token operator">:</span> <span class="token string">"medium"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">reviewCount</span><span class="token operator">:</span> <span class="token number">45</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h3 id="2-expo-location---get-current-location">2. Expo Location - Get Current Location </h3>
+<p><strong>Purpose:</strong> Get device's current GPS coordinates.</p>
+<p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token operator">*</span> <span class="token keyword module keyword-as">as</span> <span class="token maybe-class-name">Location</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"expo-location"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">getCurrentLocation</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> status <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token maybe-class-name">Location</span><span class="token punctuation">.</span><span class="token method function property-access">requestForegroundPermissionsAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>status <span class="token operator">!==</span> <span class="token string">"granted"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Location permission denied"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword keyword-const">const</span> <span class="token dom variable">location</span> <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token maybe-class-name">Location</span><span class="token punctuation">.</span><span class="token method function property-access">getCurrentPositionAsync</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">accuracy</span><span class="token operator">:</span> <span class="token maybe-class-name">Location</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">Accuracy</span></span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">High</span></span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">coords</span><span class="token punctuation">.</span><span class="token property-access">latitude</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">coords</span><span class="token punctuation">.</span><span class="token property-access">longitude</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">accuracy</span><span class="token operator">:</span> <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">coords</span><span class="token punctuation">.</span><span class="token property-access">accuracy</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Example Output:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token number">37.7749</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">122.4194</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">accuracy</span><span class="token operator">:</span> <span class="token number">10.5</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h3 id="3-expo-location---background-tracking">3. Expo Location - Background Tracking </h3>
+<p><strong>Purpose:</strong> Track location in background for live sharing.</p>
+<p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token operator">*</span> <span class="token keyword module keyword-as">as</span> <span class="token maybe-class-name">Location</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"expo-location"</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token operator">*</span> <span class="token keyword module keyword-as">as</span> <span class="token maybe-class-name">TaskManager</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"expo-task-manager"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token constant">LOCATION_TASK</span> <span class="token operator">=</span> <span class="token string">"background-location-task"</span><span class="token punctuation">;</span>
+
+<span class="token maybe-class-name">TaskManager</span><span class="token punctuation">.</span><span class="token method function property-access">defineTask</span><span class="token punctuation">(</span><span class="token constant">LOCATION_TASK</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> data<span class="token punctuation">,</span> error <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> locations <span class="token punctuation">}</span> <span class="token operator">=</span> data<span class="token punctuation">;</span>
+    <span class="token keyword keyword-const">const</span> <span class="token dom variable">location</span> <span class="token operator">=</span> locations<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword control-flow keyword-await">await</span> <span class="token function">updateLocation</span><span class="token punctuation">(</span>sessionId<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">latitude</span><span class="token operator">:</span> <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">coords</span><span class="token punctuation">.</span><span class="token property-access">latitude</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">longitude</span><span class="token operator">:</span> <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">coords</span><span class="token punctuation">.</span><span class="token property-access">longitude</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">startBackgroundTracking</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-await">await</span> <span class="token maybe-class-name">Location</span><span class="token punctuation">.</span><span class="token method function property-access">startLocationUpdatesAsync</span><span class="token punctuation">(</span><span class="token constant">LOCATION_TASK</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">accuracy</span><span class="token operator">:</span> <span class="token maybe-class-name">Location</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">Accuracy</span></span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">Balanced</span></span><span class="token punctuation">,</span>
+    <span class="token literal-property property">timeInterval</span><span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">distanceInterval</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">foregroundService</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">notificationTitle</span><span class="token operator">:</span> <span class="token string">"SafeRoute Location Sharing"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">notificationBody</span><span class="token operator">:</span> <span class="token string">"Your location is being shared"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="error-handling-patterns">Error Handling Patterns </h2>
+<h3 id="rate-limiting">Rate Limiting </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-let">let</span> lastRequestTime <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> <span class="token constant">MIN_REQUEST_INTERVAL</span> <span class="token operator">=</span> <span class="token number">2000</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">rateLimitedFetch</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> now <span class="token operator">=</span> <span class="token known-class-name class-name">Date</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> timeSinceLastRequest <span class="token operator">=</span> now <span class="token operator">-</span> lastRequestTime<span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>timeSinceLastRequest <span class="token operator">&lt;</span> <span class="token constant">MIN_REQUEST_INTERVAL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-await">await</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token arrow operator">=&gt;</span> 
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> <span class="token constant">MIN_REQUEST_INTERVAL</span> <span class="token operator">-</span> timeSinceLastRequest<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  lastRequestTime <span class="token operator">=</span> <span class="token known-class-name class-name">Date</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="retry-logic">Retry Logic </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">fetchWithRetry</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> maxRetries <span class="token operator">=</span> <span class="token number">3</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-let">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> maxRetries<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-try">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      
+      <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span><span class="token property-access">status</span> <span class="token operator">===</span> <span class="token number">429</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-await">await</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token arrow operator">=&gt;</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> <span class="token number">2000</span> <span class="token operator">*</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword control-flow keyword-continue">continue</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      
+      <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span><span class="token property-access">ok</span><span class="token punctuation">)</span> <span class="token keyword control-flow keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">HTTP </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span><span class="token property-access">status</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      
+      <span class="token keyword control-flow keyword-return">return</span> <span class="token keyword control-flow keyword-await">await</span> response<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-catch">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>i <span class="token operator">===</span> maxRetries <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword control-flow keyword-throw">throw</span> error<span class="token punctuation">;</span>
+      <span class="token keyword control-flow keyword-await">await</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token arrow operator">=&gt;</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token operator">*</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="caching">Caching </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> cache <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> <span class="token constant">CACHE_DURATION</span> <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">fetchWithCache</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> cacheKey</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> cached <span class="token operator">=</span> cache<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span>cacheKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>cached <span class="token operator">&amp;&amp;</span> <span class="token known-class-name class-name">Date</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> cached<span class="token punctuation">.</span><span class="token property-access">timestamp</span> <span class="token operator">&lt;</span> <span class="token constant">CACHE_DURATION</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> cached<span class="token punctuation">.</span><span class="token property-access">data</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">then</span><span class="token punctuation">(</span><span class="token parameter">r</span> <span class="token arrow operator">=&gt;</span> r<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cache<span class="token punctuation">.</span><span class="token method function property-access">set</span><span class="token punctuation">(</span>cacheKey<span class="token punctuation">,</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> <span class="token literal-property property">timestamp</span><span class="token operator">:</span> <span class="token known-class-name class-name">Date</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-return">return</span> data<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="rate-limits--quotas">Rate Limits &amp; Quotas </h2>
+<h3 id="google-maps-apis-1">Google Maps APIs </h3>
+<ul>
+<li><strong>Directions API</strong>: 50 requests/second</li>
+<li><strong>Places API</strong>: 100 requests/second</li>
+<li><strong>Daily quota</strong>: Varies by billing plan</li>
+</ul>
+<h3 id="twilio-whatsapp">Twilio WhatsApp </h3>
+<ul>
+<li><strong>Rate limit</strong>: 1 message/second per number</li>
+<li><strong>Daily quota</strong>: Varies by account type</li>
+</ul>
+<h3 id="firebase">Firebase </h3>
+<ul>
+<li><strong>Firestore reads</strong>: 50,000/day (free tier)</li>
+<li><strong>Firestore writes</strong>: 20,000/day (free tier)</li>
+<li><strong>Realtime Database</strong>: 100 simultaneous connections (free tier)</li>
+</ul>
+<hr>
+<h2 id="best-practices">Best Practices </h2>
+<ol>
+<li>Always implement rate limiting for external API calls</li>
+<li>Cache responses when data doesn't change frequently</li>
+<li>Handle errors gracefully with user-friendly messages</li>
+<li>Use retry logic for transient failures</li>
+<li>Validate inputs before making API calls</li>
+<li>Monitor API usage to avoid quota exhaustion</li>
+<li>Secure API keys using environment variables</li>
+<li>Implement timeouts for all network requests</li>
+</ol>
+<hr>
+<p><strong>Last Updated:</strong> 2024<br>
+<strong>Version:</strong> 1.0.0</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

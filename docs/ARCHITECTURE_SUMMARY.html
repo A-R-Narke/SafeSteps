@@ -1,0 +1,1102 @@
+<!DOCTYPE html><html><head>
+      <title>ARCHITECTURE_SUMMARY</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\adity\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="saferoute---architecture-summary">SafeRoute - Architecture Summary </h1>
+<p>Complete overview of SafeRoute's architecture, showing relationships between APIs, UI components, and data flow.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents </h2>
+<ol>
+<li><a href="#quick-reference-tables">Quick Reference Tables</a></li>
+<li><a href="#architecture-diagrams">Architecture Diagrams</a></li>
+<li><a href="#api-component-mapping">API-Component Mapping</a></li>
+<li><a href="#data-flow-diagrams">Data Flow Diagrams</a></li>
+<li><a href="#integration-matrix">Integration Matrix</a></li>
+</ol>
+<hr>
+<h2 id="quick-reference-tables">Quick Reference Tables </h2>
+<h3 id="application-pages-overview">Application Pages Overview </h3>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>File</th>
+<th>Primary APIs Used</th>
+<th>Key Components</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Home</strong></td>
+<td><code>app/(tabs)/Home.tsx</code></td>
+<td>None</td>
+<td>Button, Image</td>
+<td>Dashboard &amp; quick actions</td>
+</tr>
+<tr>
+<td><strong>Navigate</strong></td>
+<td><code>app/(tabs)/navigate.tsx</code></td>
+<td>Google Directions, Google Places, Firebase Realtime DB</td>
+<td>MapDisplay, RouteOptionsDisplay, SearchBar, BottomSheet</td>
+<td>Safety-aware navigation</td>
+</tr>
+<tr>
+<td><strong>Contacts</strong></td>
+<td><code>app/(tabs)/contacts.tsx</code></td>
+<td>Twilio WhatsApp, Expo Location</td>
+<td>Card, IconButton, TextInput</td>
+<td>Emergency contact management</td>
+</tr>
+<tr>
+<td><strong>SOS</strong></td>
+<td><code>app/(tabs)/SOS.tsx</code></td>
+<td>Twilio WhatsApp, Expo Location, Linking</td>
+<td>Button, Image</td>
+<td>Emergency alert system</td>
+</tr>
+<tr>
+<td><strong>Saved Places</strong></td>
+<td><code>app/SavedPlacesScreen.tsx</code></td>
+<td>AsyncStorage</td>
+<td>FlatList, Card</td>
+<td>Manage saved locations</td>
+</tr>
+<tr>
+<td><strong>Live Location</strong></td>
+<td><code>app/LiveLocationShareScreen.tsx</code></td>
+<td>Firebase Realtime DB, Expo Location, TaskManager</td>
+<td>MapView, Button</td>
+<td>Real-time GPS sharing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="map-components-overview">Map Components Overview </h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>File</th>
+<th>APIs Used</th>
+<th>Parent Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MapDisplay</strong></td>
+<td><code>components/maps/MapDisplay.js</code></td>
+<td>react-native-maps</td>
+<td>Navigate screen</td>
+<td>Render map with markers</td>
+</tr>
+<tr>
+<td><strong>RouteOptionsDisplay</strong></td>
+<td><code>components/maps/RouteOptionDisplay.js</code></td>
+<td>None</td>
+<td>Navigate screen</td>
+<td>Show route alternatives</td>
+</tr>
+<tr>
+<td><strong>BottomSheet</strong></td>
+<td><code>components/maps/BottomSheet.js</code></td>
+<td>None</td>
+<td>Navigate screen</td>
+<td>Location details panel</td>
+</tr>
+<tr>
+<td><strong>SearchBar</strong></td>
+<td><code>components/maps/SearchBar.js</code></td>
+<td>None</td>
+<td>Navigate screen</td>
+<td>Place search input</td>
+</tr>
+<tr>
+<td><strong>DirectionsModal</strong></td>
+<td><code>components/maps/DirectionModal.js</code></td>
+<td>None</td>
+<td>Navigate screen</td>
+<td>Turn-by-turn instructions</td>
+</tr>
+<tr>
+<td><strong>SafetyReviewModal</strong></td>
+<td><code>components/maps/SafetyReviewModal.js</code></td>
+<td>Firebase Realtime DB</td>
+<td>Navigate screen</td>
+<td>Submit safety ratings</td>
+</tr>
+<tr>
+<td><strong>LoadingOverlay</strong></td>
+<td><code>components/maps/LoadingOverlay.js</code></td>
+<td>None</td>
+<td>Navigate screen</td>
+<td>Loading indicator</td>
+</tr>
+<tr>
+<td><strong>NavigationHeader</strong></td>
+<td><code>components/maps/NavigationHeader.js</code></td>
+<td>None</td>
+<td>Navigate screen</td>
+<td>Active navigation info</td>
+</tr>
+<tr>
+<td><strong>MultiplePlacesModal</strong></td>
+<td><code>components/maps/MultiplePlacesModal.js</code></td>
+<td>None</td>
+<td>Navigate screen</td>
+<td>Nearby places list</td>
+</tr>
+</tbody>
+</table>
+<h3 id="api-usage-matrix">API Usage Matrix </h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Used By</th>
+<th>Purpose</th>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Google Directions</strong></td>
+<td>Navigate screen</td>
+<td>Calculate routes</td>
+<td>origin, destination coordinates</td>
+<td>Route polyline, steps, distance, duration</td>
+</tr>
+<tr>
+<td><strong>Google Places (Text Search)</strong></td>
+<td>Navigate screen (SearchBar)</td>
+<td>Search locations</td>
+<td>query string</td>
+<td>Place name, address, coordinates</td>
+</tr>
+<tr>
+<td><strong>Google Places (Autocomplete)</strong></td>
+<td>Navigate screen (SearchBar)</td>
+<td>Autocomplete suggestions</td>
+<td>partial query</td>
+<td>Prediction list</td>
+</tr>
+<tr>
+<td><strong>Google Places (Nearby)</strong></td>
+<td>Navigate screen</td>
+<td>Find nearby places</td>
+<td>location, type, radius</td>
+<td>List of nearby places</td>
+</tr>
+<tr>
+<td><strong>Twilio WhatsApp</strong></td>
+<td>Contacts, SOS screens</td>
+<td>Send emergency messages</td>
+<td>phone, message, location</td>
+<td>Message status</td>
+</tr>
+<tr>
+<td><strong>Firebase Firestore</strong></td>
+<td>Navigate screen</td>
+<td>Store/retrieve safety reviews</td>
+<td>review data</td>
+<td>Review documents</td>
+</tr>
+<tr>
+<td><strong>Firebase Realtime DB</strong></td>
+<td>Navigate, Live Location screens</td>
+<td>Real-time location sharing</td>
+<td>session ID, location</td>
+<td>Live location updates</td>
+</tr>
+<tr>
+<td><strong>Firebase Auth</strong></td>
+<td>Navigate screen</td>
+<td>Anonymous authentication</td>
+<td>None</td>
+<td>User ID</td>
+</tr>
+<tr>
+<td><strong>Expo Location</strong></td>
+<td>Navigate, Contacts, SOS, Live Location</td>
+<td>GPS tracking</td>
+<td>accuracy level</td>
+<td>Coordinates, accuracy</td>
+</tr>
+<tr>
+<td><strong>AsyncStorage</strong></td>
+<td>Contacts, Saved Places</td>
+<td>Local data persistence</td>
+<td>key, value</td>
+<td>Stored data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-layer-overview">Service Layer Overview </h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>File</th>
+<th>APIs Used</th>
+<th>Used By</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Route Safety Service</strong></td>
+<td><code>services/routeSafetyService.ts</code></td>
+<td>OSM Overpass API</td>
+<td>Navigate screen</td>
+<td>Calculate route safety scores</td>
+</tr>
+<tr>
+<td><strong>Twilio Service</strong></td>
+<td><code>services/twilioService.ts</code></td>
+<td>Twilio WhatsApp API</td>
+<td>Contacts, SOS screens</td>
+<td>Send WhatsApp messages</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="architecture-diagrams">Architecture Diagrams </h2>
+<h3 id="system-architecture">System Architecture </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────────┐
+│                     SafeRoute Application                    │
+├─────────────────────────────────────────────────────────────┤
+│                                                               │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
+│  │   Home Tab   │  │ Navigate Tab │  │ Contacts Tab │      │
+│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘      │
+│         │                  │                  │              │
+│         └──────────────────┼──────────────────┘              │
+│                            │                                 │
+│  ┌─────────────────────────▼──────────────────────────┐     │
+│  │              Navigation Layer                       │     │
+│  │  - Route calculation                                │     │
+│  │  - Location tracking                                │     │
+│  │  - Safety analysis                                  │     │
+│  └─────────────────────────┬──────────────────────────┘     │
+│                            │                                 │
+│  ┌─────────────────────────▼──────────────────────────┐     │
+│  │              Service Layer                          │     │
+│  │  - routeSafetyService.ts                           │     │
+│  │  - twilioService.ts                                │     │
+│  └─────────────────────────┬──────────────────────────┘     │
+│                            │                                 │
+└────────────────────────────┼─────────────────────────────────┘
+                             │
+         ┌───────────────────┼───────────────────┐
+         │                   │                   │
+         ▼                   ▼                   ▼
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│  Google Maps    │ │    Firebase     │ │     Twilio      │
+│  - Directions   │ │  - Firestore    │ │  - WhatsApp API │
+│  - Places       │ │  - Realtime DB  │ └─────────────────┘
+│  - Geocoding    │ │  - Auth         │
+└─────────────────┘ └─────────────────┘
+</code></pre><h3 id="navigate-screen-component-hierarchy">Navigate Screen Component Hierarchy </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Navigate Screen (SafeMaps)
+│
+├── SearchBar
+│   └── Search Results Dropdown
+│
+├── MapDisplay
+│   ├── User Location Marker
+│   ├── Selected Location Marker
+│   ├── Safety Review Markers
+│   ├── Dangerous Area Circles
+│   ├── Route Polyline
+│   ├── Nearby Police Markers
+│   ├── Nearby Hospital Markers
+│   └── My Location Button
+│
+├── Quick Action Buttons
+│   ├── Police Button
+│   └── Hospital Button
+│
+├── RouteOptionsDisplay (when routes calculated)
+│   ├── Safety Toggle
+│   ├── Route Cards (horizontal scroll)
+│   ├── Action Buttons
+│   │   ├── Directions Button
+│   │   └── Start Navigation Button
+│   └── Recalculate Button
+│
+├── BottomSheet (when location selected)
+│   ├── Location Title
+│   ├── Location Subtitle
+│   └── Action Buttons
+│       ├── Safe Route
+│       ├── Save
+│       └── Share
+│
+├── Modals
+│   ├── DirectionsModal
+│   ├── SafetyReviewModal
+│   ├── NearestPlaceConfirmationModal
+│   └── MultiplePlacesModal
+│
+├── Overlays
+│   ├── LoadingOverlay
+│   ├── NavigationHeader
+│   └── LongPressInstruction
+│
+└── State Management
+    ├── Location State
+    ├── Search State
+    ├── Route State
+    ├── Safety State
+    └── UI State
+</code></pre><hr>
+<h2 id="api-component-mapping">API-Component Mapping </h2>
+<h3 id="google-directions-api--navigate-screen">Google Directions API → Navigate Screen </h3>
+<p><strong>Flow:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User selects destination
+    ↓
+Navigate screen calls getMultipleGoogleRoutes()
+    ↓
+Fetches from Google Directions API
+    ↓
+Decodes polyline to coordinates
+    ↓
+Passes to analyzeRouteSafety()
+    ↓
+Displays in RouteOptionsDisplay component
+</code></pre><p><strong>Code Path:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Navigate screen</span>
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">calculateAndShowRoutes</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span>destination<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> routes <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">getMultipleGoogleRoutes</span><span class="token punctuation">(</span>origin<span class="token punctuation">,</span> destination<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// routes → RouteOptionsDisplay</span>
+  <span class="token function">setRouteOptions</span><span class="token punctuation">(</span>routes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// RouteOptionsDisplay renders</span>
+<span class="token operator">&lt;</span>RouteOptionsDisplay
+  routeOptions<span class="token operator">=</span><span class="token punctuation">{</span>routeOptions<span class="token punctuation">}</span>
+  onSelectRoute<span class="token operator">=</span><span class="token punctuation">{</span>selectRouteOption<span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><h3 id="google-places-api--searchbar-component">Google Places API → SearchBar Component </h3>
+<p><strong>Flow:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User types in SearchBar
+    ↓
+Debounced search (500ms)
+    ↓
+Navigate screen calls searchPlaces()
+    ↓
+Fetches from Google Places Text Search API
+    ↓
+Returns formatted results
+    ↓
+SearchBar displays dropdown
+    ↓
+User selects result
+    ↓
+BottomSheet shows location details
+</code></pre><p><strong>Code Path:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// SearchBar component</span>
+<span class="token operator">&lt;</span>SearchBar
+  searchQuery<span class="token operator">=</span><span class="token punctuation">{</span>searchQuery<span class="token punctuation">}</span>
+  onSearch<span class="token operator">=</span><span class="token punctuation">{</span>searchPlaces<span class="token punctuation">}</span>
+  searchResults<span class="token operator">=</span><span class="token punctuation">{</span>searchResults<span class="token punctuation">}</span>
+  onSelectResult<span class="token operator">=</span><span class="token punctuation">{</span>selectSearchResult<span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Navigate screen</span>
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">searchPlaces</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span>query<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token constant">GOOGLE_PLACES_API</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> results <span class="token operator">=</span> <span class="token function">formatResults</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setSearchResults</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="firebase-realtime-db--live-location-screen">Firebase Realtime DB → Live Location Screen </h3>
+<p><strong>Flow:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User starts location sharing
+    ↓
+Live Location screen creates session
+    ↓
+Writes to Firebase: live_locations/{sessionId}
+    ↓
+Starts background location tracking
+    ↓
+Updates Firebase every 10 seconds
+    ↓
+Contacts can subscribe to session
+    ↓
+Receive real-time location updates
+</code></pre><p><strong>Code Path:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Live Location screen</span>
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">startLocationSharing</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> sessionId <span class="token operator">=</span> <span class="token function">generateSessionId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> locationRef <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span>realtimeDb<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">live_locations/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>sessionId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-await">await</span> <span class="token function">set</span><span class="token punctuation">(</span>locationRef<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    userId<span class="token operator">:</span> currentUserId<span class="token punctuation">,</span>
+    latitude<span class="token operator">:</span> location<span class="token punctuation">.</span>latitude<span class="token punctuation">,</span>
+    longitude<span class="token operator">:</span> location<span class="token punctuation">.</span>longitude<span class="token punctuation">,</span>
+    timestamp<span class="token operator">:</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-await">await</span> Location<span class="token punctuation">.</span><span class="token function">startLocationUpdatesAsync</span><span class="token punctuation">(</span><span class="token constant">TASK_NAME</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    timeInterval<span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+    distanceInterval<span class="token operator">:</span> <span class="token number">10</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="twilio-whatsapp-api--contacts-screen">Twilio WhatsApp API → Contacts Screen </h3>
+<p><strong>Flow:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User presses WhatsApp share button
+    ↓
+Contacts screen gets current location
+    ↓
+Calls sendWhatsAppLocationViaTwilio()
+    ↓
+twilioService.ts formats message
+    ↓
+Sends POST to Twilio API
+    ↓
+Twilio delivers WhatsApp message
+    ↓
+Shows success/failure alert
+</code></pre><p><strong>Code Path:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Contacts screen</span>
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">handleShareViaWhatsApp</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span>contact<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> location <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> Location<span class="token punctuation">.</span><span class="token function">getCurrentPositionAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-const">const</span> result <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">sendWhatsAppLocationViaTwilio</span><span class="token punctuation">(</span>
+    contact<span class="token punctuation">.</span>phone<span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> latitude<span class="token operator">:</span> location<span class="token punctuation">.</span>coords<span class="token punctuation">.</span>latitude<span class="token punctuation">,</span> longitude<span class="token operator">:</span> location<span class="token punctuation">.</span>coords<span class="token punctuation">.</span>longitude <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    contact<span class="token punctuation">.</span>name
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Alert<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Location Shared"</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// twilioService.ts</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-const">const</span> <span class="token function-variable function">sendWhatsAppLocationViaTwilio</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span>phone<span class="token punctuation">,</span> location<span class="token punctuation">,</span> name<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token constant">TWILIO_API_URL</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    method<span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">{</span> Authorization<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Basic </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">btoa</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">SID</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">TOKEN</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      From<span class="token operator">:</span> <span class="token constant">TWILIO_WHATSAPP_NUMBER</span><span class="token punctuation">,</span>
+      To<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">whatsapp:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>phone<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      Body<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">📍 Location: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>location<span class="token punctuation">.</span>latitude<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>location<span class="token punctuation">.</span>longitude<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-return">return</span> <span class="token punctuation">{</span> success<span class="token operator">:</span> response<span class="token punctuation">.</span>ok<span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">"Sent successfully"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="data-flow-diagrams">Data Flow Diagrams </h2>
+<h3 id="route-calculation-flow">Route Calculation Flow </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────┐
+│  User Action    │
+│  Select Dest    │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  Navigate Screen                    │
+│  calculateAndShowRoutes()           │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  getMultipleGoogleRoutes()          │
+│  - Fetch standard routes            │
+│  - Fetch avoid highways             │
+│  - Fetch avoid tolls                │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  Google Directions API              │
+│  Returns: routes with polylines     │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  decodePolyline()                   │
+│  Convert to coordinates array       │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  analyzeRouteSafety()               │
+│  - Get area safety scores           │
+│  - Call routeSafetyService          │
+│  - Calculate overall safety         │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  Route Safety Service               │
+│  - Fetch OSM data                   │
+│  - Calculate lighting score         │
+│  - Calculate crowd score            │
+│  - Return enhanced safety           │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  Sort routes by safety &amp; duration   │
+│  Assign colors based on scores      │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  RouteOptionsDisplay Component      │
+│  Display route cards with scores    │
+└─────────────────────────────────────┘
+</code></pre><h3 id="safety-review-submission-flow">Safety Review Submission Flow </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────┐
+│  User Action    │
+│  Long Press Map │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  Navigate Screen                    │
+│  onLongPress() → setReviewLocation  │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  SafetyReviewModal                  │
+│  User inputs:                       │
+│  - Rating (1-5)                     │
+│  - Category                         │
+│  - Comment                          │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  Navigate Screen                    │
+│  submitSafetyReview()               │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  Firebase Realtime Database         │
+│  Write to: safety_reviews/{id}      │
+│  Data: lat, lng, rating, comment    │
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  Update Local State                 │
+│  - Add to safetyReviews array       │
+│  - Update dangerousAreas if rating≤2│
+└────────┬────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  MapDisplay Component               │
+│  Re-render with new markers         │
+└─────────────────────────────────────┘
+</code></pre><h3 id="emergency-sos-flow">Emergency SOS Flow </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────┐
+│  User Action    │
+│  Press SOS Btn  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────────────────────────┐
+│  SOS Screen                         │
+│  onButtonPress()                    │
+└────────┬────────────────────────────┘
+         │
+         ├─────────────────────────────┐
+         │                             │
+         ▼                             ▼
+┌──────────────────┐      ┌──────────────────────┐
+│  Linking API     │      │  Load Contacts       │
+│  tel:122         │      │  from AsyncStorage   │
+└──────────────────┘      └──────┬───────────────┘
+                                 │
+                                 ▼
+                    ┌──────────────────────────┐
+                    │  Get Current Location    │
+                    │  Expo Location API       │
+                    └──────┬───────────────────┘
+                           │
+                           ▼
+                    ┌──────────────────────────┐
+                    │  For each contact:       │
+                    │  sendWhatsAppLocation()  │
+                    └──────┬───────────────────┘
+                           │
+                           ▼
+                    ┌──────────────────────────┐
+                    │  Twilio WhatsApp API     │
+                    │  Send emergency message  │
+                    └──────┬───────────────────┘
+                           │
+                           ▼
+                    ┌──────────────────────────┐
+                    │  Show Success/Fail Alert │
+                    │  with contact summary    │
+                    └──────────────────────────┘
+</code></pre><hr>
+<h2 id="integration-matrix">Integration Matrix </h2>
+<h3 id="page--api--component-integration">Page → API → Component Integration </h3>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>API Called</th>
+<th>Service Layer</th>
+<th>Component Updated</th>
+<th>Data Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Navigate</strong></td>
+<td>Google Directions</td>
+<td>routeSafetyService</td>
+<td>RouteOptionsDisplay, MapDisplay</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Navigate</strong></td>
+<td>Google Places</td>
+<td>None</td>
+<td>SearchBar, BottomSheet</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Navigate</strong></td>
+<td>Firebase Realtime DB</td>
+<td>None</td>
+<td>MapDisplay (markers)</td>
+<td>safety_reviews/{id}</td>
+</tr>
+<tr>
+<td><strong>Contacts</strong></td>
+<td>Twilio WhatsApp</td>
+<td>twilioService</td>
+<td>Alert dialog</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Contacts</strong></td>
+<td>Expo Location</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Contacts</strong></td>
+<td>AsyncStorage</td>
+<td>None</td>
+<td>Contact cards</td>
+<td>@SafeRoute:contacts</td>
+</tr>
+<tr>
+<td><strong>SOS</strong></td>
+<td>Twilio WhatsApp</td>
+<td>twilioService</td>
+<td>Alert dialog</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>SOS</strong></td>
+<td>Expo Location</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>SOS</strong></td>
+<td>Linking (tel:)</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Live Location</strong></td>
+<td>Firebase Realtime DB</td>
+<td>None</td>
+<td>MapView</td>
+<td>live_locations/{sessionId}</td>
+</tr>
+<tr>
+<td><strong>Live Location</strong></td>
+<td>Expo Location</td>
+<td>None</td>
+<td>Status text</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Live Location</strong></td>
+<td>TaskManager</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Saved Places</strong></td>
+<td>AsyncStorage</td>
+<td>None</td>
+<td>FlatList</td>
+<td>savedLocations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="component-dependencies">Component Dependencies </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>MapDisplay
+├── Depends on: react-native-maps
+├── Receives props from: Navigate screen
+├── Displays data from: Firebase, Google APIs
+└── Updates: Map markers, polylines, circles
+
+RouteOptionsDisplay
+├── Depends on: None (pure UI)
+├── Receives props from: Navigate screen
+├── Displays data from: Google Directions API
+└── Triggers: Route selection, navigation start
+
+SearchBar
+├── Depends on: None (pure UI)
+├── Receives props from: Navigate screen
+├── Triggers API call: Google Places Text Search
+└── Updates: Search results dropdown
+
+BottomSheet
+├── Depends on: Animated API
+├── Receives props from: Navigate screen
+├── Displays data from: Selected location
+└── Triggers: Navigation, save, share actions
+
+SafetyReviewModal
+├── Depends on: None (pure UI)
+├── Receives props from: Navigate screen
+├── Submits to: Firebase Realtime Database
+└── Updates: Local safety reviews state
+</code></pre><h3 id="api-rate-limits--caching-strategy">API Rate Limits &amp; Caching Strategy </h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Rate Limit</th>
+<th>Caching Strategy</th>
+<th>Cache Duration</th>
+<th>Fallback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Google Directions</strong></td>
+<td>50 req/sec</td>
+<td>In-memory Map</td>
+<td>5 minutes</td>
+<td>Show error, retry</td>
+</tr>
+<tr>
+<td><strong>Google Places</strong></td>
+<td>100 req/sec</td>
+<td>In-memory Map</td>
+<td>5 minutes</td>
+<td>Show cached results</td>
+</tr>
+<tr>
+<td><strong>Twilio WhatsApp</strong></td>
+<td>1 msg/sec/number</td>
+<td>None</td>
+<td>N/A</td>
+<td>Queue messages</td>
+</tr>
+<tr>
+<td><strong>Firebase Realtime DB</strong></td>
+<td>100 concurrent</td>
+<td>Real-time sync</td>
+<td>N/A</td>
+<td>Offline persistence</td>
+</tr>
+<tr>
+<td><strong>OSM Overpass</strong></td>
+<td>Custom</td>
+<td>In-memory Map</td>
+<td>10 minutes</td>
+<td>Use basic scoring</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error-handling-matrix">Error Handling Matrix </h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>API Error</th>
+<th>Handling Strategy</th>
+<th>User Feedback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Navigate</strong></td>
+<td>Google Directions fails</td>
+<td>Retry 3 times, show error</td>
+<td>Alert: "Could not calculate routes"</td>
+</tr>
+<tr>
+<td><strong>Navigate</strong></td>
+<td>Google Places fails</td>
+<td>Show empty results</td>
+<td>"No results found"</td>
+</tr>
+<tr>
+<td><strong>Navigate</strong></td>
+<td>Firebase write fails</td>
+<td>Save locally, retry</td>
+<td>Alert: "Saved locally, will sync"</td>
+</tr>
+<tr>
+<td><strong>Contacts</strong></td>
+<td>Twilio fails</td>
+<td>Continue with fallback</td>
+<td>Alert: "Failed to send, try direct WhatsApp"</td>
+</tr>
+<tr>
+<td><strong>SOS</strong></td>
+<td>Location unavailable</td>
+<td>Skip location sharing</td>
+<td>Alert: "Location unavailable"</td>
+</tr>
+<tr>
+<td><strong>Live Location</strong></td>
+<td>Firebase connection lost</td>
+<td>Buffer updates</td>
+<td>Status: "Reconnecting..."</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="state-management-flow">State Management Flow </h2>
+<h3 id="navigate-screen-state-flow">Navigate Screen State Flow </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Initial State
+    ↓
+┌─────────────────────────────────────┐
+│  location: null                     │
+│  isLocationReady: false             │
+│  searchQuery: ""                    │
+│  routeOptions: []                   │
+│  isNavigationMode: false            │
+└─────────────────────────────────────┘
+    ↓
+getCurrentLocation()
+    ↓
+┌─────────────────────────────────────┐
+│  location: LocationObject           │
+│  isLocationReady: true              │
+│  mapRegion: Region                  │
+└─────────────────────────────────────┘
+    ↓
+User searches for place
+    ↓
+┌─────────────────────────────────────┐
+│  searchQuery: "DB City Mall"        │
+│  searchResults: [...]               │
+│  showSearchResults: true            │
+└─────────────────────────────────────┘
+    ↓
+User selects result
+    ↓
+┌─────────────────────────────────────┐
+│  selectedLocation: SearchResult     │
+│  showBottomSheet: true              │
+└─────────────────────────────────────┘
+    ↓
+User starts navigation
+    ↓
+┌─────────────────────────────────────┐
+│  isCalculatingRoute: true           │
+└─────────────────────────────────────┘
+    ↓
+Routes calculated
+    ↓
+┌─────────────────────────────────────┐
+│  routeOptions: [Route1, Route2]     │
+│  selectedRouteIndex: 0              │
+│  routeCoordinates: [...]            │
+│  routeInfo: RouteInfo               │
+│  isCalculatingRoute: false          │
+└─────────────────────────────────────┘
+    ↓
+User starts actual navigation
+    ↓
+┌─────────────────────────────────────┐
+│  isNavigationMode: true             │
+│  locationWatcher: Subscription      │
+└─────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="cross-reference-index">Cross-Reference Index </h2>
+<h3 id="api-documentation--ui-components">API Documentation → UI Components </h3>
+<ul>
+<li><strong>Google Directions API</strong> → Used by: <a href="#2-navigate-safemaps">Navigate Screen</a>, <a href="#2-routeoptionsdisplay">RouteOptionsDisplay</a></li>
+<li><strong>Google Places API</strong> → Used by: <a href="#2-navigate-safemaps">Navigate Screen</a>, <a href="#4-searchbar">SearchBar</a></li>
+<li><strong>Twilio WhatsApp API</strong> → Used by: <a href="#3-contacts-screen">Contacts Screen</a>, <a href="#4-sos-screen">SOS Screen</a></li>
+<li><strong>Firebase Realtime DB</strong> → Used by: <a href="#2-navigate-safemaps">Navigate Screen</a>, <a href="#6-live-location-share-screen">Live Location Screen</a>, <a href="#6-safetyreviewmodal">SafetyReviewModal</a></li>
+<li><strong>Expo Location</strong> → Used by: All screens with location features</li>
+</ul>
+<h3 id="ui-components--api-documentation">UI Components → API Documentation </h3>
+<ul>
+<li><strong>Navigate Screen</strong> → Uses: <a href="API_DOCUMENTATION.md#1-google-directions-api">Google Directions API</a>, <a href="API_DOCUMENTATION.md#2-google-places-api-text-search">Google Places API</a>, <a href="API_DOCUMENTATION.md#firebase-apis">Firebase APIs</a></li>
+<li><strong>Contacts Screen</strong> → Uses: <a href="API_DOCUMENTATION.md#twilio-whatsapp-api">Twilio WhatsApp API</a>, <a href="API_DOCUMENTATION.md#2-expo-location---get-current-location">Expo Location</a></li>
+<li><strong>SOS Screen</strong> → Uses: <a href="API_DOCUMENTATION.md#twilio-whatsapp-api">Twilio WhatsApp API</a>, <a href="API_DOCUMENTATION.md#2-expo-location---get-current-location">Expo Location</a></li>
+<li><strong>MapDisplay</strong> → Displays data from: <a href="API_DOCUMENTATION.md#1-google-directions-api">Google Directions API</a>, <a href="API_DOCUMENTATION.md#3-realtime-database---share-live-location">Firebase Realtime DB</a></li>
+<li><strong>RouteOptionsDisplay</strong> → Displays data from: <a href="API_DOCUMENTATION.md#1-route-safety-service---analyze-route-safety">Route Safety Service</a></li>
+</ul>
+<h3 id="service-layer-cross-reference">Service Layer Cross-Reference </h3>
+<ul>
+<li><strong>routeSafetyService.ts</strong> → Called by: <a href="UI_COMPONENTS_DOCUMENTATION.md#2-navigate-safemaps">Navigate Screen</a> → Uses: <a href="API_DOCUMENTATION.md#api-integration">OSM Overpass API</a></li>
+<li><strong>twilioService.ts</strong> → Called by: <a href="UI_COMPONENTS_DOCUMENTATION.md#3-contacts-screen">Contacts Screen</a>, <a href="UI_COMPONENTS_DOCUMENTATION.md#4-sos-screen">SOS Screen</a> → Uses: <a href="API_DOCUMENTATION.md#twilio-whatsapp-api">Twilio WhatsApp API</a></li>
+</ul>
+<hr>
+<h2 id="technology-stack-summary">Technology Stack Summary </h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technologies</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frontend</strong></td>
+<td>React 19.0.0, React Native 0.79.5, TypeScript 5.8.3</td>
+<td>UI rendering &amp; type safety</td>
+</tr>
+<tr>
+<td><strong>Navigation</strong></td>
+<td>Expo Router 5.1.4, React Navigation 7.x</td>
+<td>Screen routing &amp; navigation</td>
+</tr>
+<tr>
+<td><strong>Maps</strong></td>
+<td>react-native-maps 1.20.1, Google Maps API</td>
+<td>Map display &amp; routing</td>
+</tr>
+<tr>
+<td><strong>Location</strong></td>
+<td>expo-location 18.1.6, expo-task-manager 13.1.6</td>
+<td>GPS tracking &amp; background tasks</td>
+</tr>
+<tr>
+<td><strong>Backend</strong></td>
+<td>Firebase 12.2.1 (Firestore, Realtime DB, Auth)</td>
+<td>Data storage &amp; real-time sync</td>
+</tr>
+<tr>
+<td><strong>Messaging</strong></td>
+<td>Twilio WhatsApp API</td>
+<td>Emergency notifications</td>
+</tr>
+<tr>
+<td><strong>UI Library</strong></td>
+<td>react-native-paper 5.14.5</td>
+<td>Material Design components</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>AsyncStorage 1.24.0</td>
+<td>Local data persistence</td>
+</tr>
+<tr>
+<td><strong>Animation</strong></td>
+<td>react-native-reanimated 3.17.4</td>
+<td>Smooth animations</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="performance-metrics">Performance Metrics </h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Target Time</th>
+<th>Actual Performance</th>
+<th>Optimization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Route Calculation</strong></td>
+<td>&lt; 3 seconds</td>
+<td>2-4 seconds</td>
+<td>Parallel API calls, caching</td>
+</tr>
+<tr>
+<td><strong>Map Rendering</strong></td>
+<td>&lt; 1 second</td>
+<td>0.5-1 second</td>
+<td>Marker clustering, lazy loading</td>
+</tr>
+<tr>
+<td><strong>Location Update</strong></td>
+<td>10 seconds</td>
+<td>10 seconds</td>
+<td>Background task optimization</td>
+</tr>
+<tr>
+<td><strong>Search Results</strong></td>
+<td>&lt; 1 second</td>
+<td>0.5-1.5 seconds</td>
+<td>Debouncing (500ms), caching</td>
+</tr>
+<tr>
+<td><strong>Safety Score Calc</strong></td>
+<td>&lt; 2 seconds</td>
+<td>1-3 seconds</td>
+<td>In-memory caching, parallel processing</td>
+</tr>
+<tr>
+<td><strong>WhatsApp Send</strong></td>
+<td>&lt; 5 seconds</td>
+<td>3-7 seconds</td>
+<td>Sequential sending with delays</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Last Updated:</strong> 2024<br>
+<strong>Version:</strong> 1.0.0</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

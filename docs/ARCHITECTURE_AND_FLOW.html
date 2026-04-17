@@ -1,0 +1,1121 @@
+<!DOCTYPE html><html><head>
+      <title>ARCHITECTURE_AND_FLOW</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\adity\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="saferoute---architecture--data-flow-documentation">SafeRoute - Architecture &amp; Data Flow Documentation </h1>
+<h2 id="table-of-contents">Table of Contents </h2>
+<ol>
+<li><a href="#system-architecture-overview">System Architecture Overview</a></li>
+<li><a href="#layer-architecture">Layer Architecture</a></li>
+<li><a href="#core-data-flows">Core Data Flows</a></li>
+<li><a href="#component-interaction-diagrams">Component Interaction Diagrams</a></li>
+<li><a href="#state-management-flow">State Management Flow</a></li>
+<li><a href="#external-service-integration">External Service Integration</a></li>
+<li><a href="#background-task-architecture">Background Task Architecture</a></li>
+</ol>
+<hr>
+<h2 id="system-architecture-overview">System Architecture Overview </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────────────────┐
+│                         SAFEROUTE APPLICATION                        │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌──────────────────────────────────────────────────────────────┐  │
+│  │                    PRESENTATION LAYER                         │  │
+│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐             │  │
+│  │  │   Home     │  │  Navigate  │  │  Contacts  │             │  │
+│  │  │  Screen    │  │   Screen   │  │   Screen   │             │  │
+│  │  └────────────┘  └────────────┘  └────────────┘             │  │
+│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐             │  │
+│  │  │    SOS     │  │  Settings  │  │Live Share  │             │  │
+│  │  │  Screen    │  │   Screen   │  │   Screen   │             │  │
+│  │  └────────────┘  └────────────┘  └────────────┘             │  │
+│  └──────────────────────────────────────────────────────────────┘  │
+│                              ↕                                       │
+│  ┌──────────────────────────────────────────────────────────────┐  │
+│  │                    COMPONENT LAYER                            │  │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │  │
+│  │  │MapDisplay│  │RouteOpts │  │SearchBar │  │BottomSht │    │  │
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │  │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │  │
+│  │  │SafetyRev │  │Directions│  │LoadingOvr│  │  Modals  │    │  │
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │  │
+│  └──────────────────────────────────────────────────────────────┘  │
+│                              ↕                                       │
+│  ┌──────────────────────────────────────────────────────────────┐  │
+│  │                    SERVICE LAYER                              │  │
+│  │  ┌────────────────────┐      ┌────────────────────┐          │  │
+│  │  │RouteSafetyService │      │   TwilioService    │          │  │
+│  │  │  - OSM Integration │      │ - WhatsApp Alerts  │          │  │
+│  │  │  - Weather API     │      │ - Location Share   │          │  │
+│  │  │  - Safety Scoring  │      │ - Emergency SOS    │          │  │
+│  │  └────────────────────┘      └────────────────────┘          │  │
+│  └──────────────────────────────────────────────────────────────┘  │
+│                              ↕                                       │
+│  ┌──────────────────────────────────────────────────────────────┐  │
+│  │                    DATA LAYER                                 │  │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │  │
+│  │  │   Firebase   │  │ AsyncStorage │  │  TaskManager │       │  │
+│  │  │  - Realtime  │  │  - Contacts  │  │  - BG Tasks  │       │  │
+│  │  │  - Auth      │  │  - Settings  │  │  - Location  │       │  │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘       │  │
+│  └──────────────────────────────────────────────────────────────┘  │
+│                              ↕                                       │
+│  ┌──────────────────────────────────────────────────────────────┐  │
+│  │                 EXTERNAL SERVICES                             │  │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │  │
+│  │  │  Google  │  │   OSM    │  │OpenWeather│ │  Twilio  │    │  │
+│  │  │   Maps   │  │Overpass  │  │    API    │ │ WhatsApp │    │  │
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │  │
+│  └──────────────────────────────────────────────────────────────┘  │
+│                                                                       │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="layer-architecture">Layer Architecture </h2>
+<h3 id="1-presentation-layer-screens">1. Presentation Layer (Screens) </h3>
+<p><strong>Location</strong>: <code>/app</code> directory</p>
+<h4 id="tab-screens-apptabs">Tab Screens (<code>/app/(tabs)/</code>) </h4>
+<ul>
+<li><strong>Home.tsx</strong>: Dashboard with quick actions</li>
+<li><strong>navigate.tsx</strong>: Main navigation with map and routing</li>
+<li><strong>contacts.tsx</strong>: Emergency contact management</li>
+<li><strong>SOS.tsx</strong>: Emergency alert system</li>
+<li><strong>settings.tsx</strong>: User preferences</li>
+</ul>
+<h4 id="modal-screens">Modal Screens </h4>
+<ul>
+<li><strong>LiveLocationShareScreen.tsx</strong>: Real-time location sharing</li>
+<li><strong>SavedPlacesScreen.tsx</strong>: Saved location management</li>
+<li><strong>Login.tsx / Signup.tsx</strong>: Authentication</li>
+</ul>
+<h3 id="2-component-layer">2. Component Layer </h3>
+<p><strong>Location</strong>: <code>/components</code> directory</p>
+<h4 id="map-components-componentsmaps">Map Components (<code>/components/maps/</code>) </h4>
+<ul>
+<li><strong>MapDisplay.native.js</strong>: Native map rendering (Google Maps)</li>
+<li><strong>MapDisplay.web.js</strong>: Web map rendering</li>
+<li><strong>RouteOptionDisplay.js</strong>: Route alternatives UI</li>
+<li><strong>BottomSheet.js</strong>: Location details panel</li>
+<li><strong>SearchBar.js</strong>: Place search interface</li>
+<li><strong>SafetyReviewModal.js</strong>: Safety rating submission</li>
+<li><strong>DirectionModal.js</strong>: Turn-by-turn directions</li>
+<li><strong>NavigationHeader.js</strong>: Active navigation UI</li>
+</ul>
+<h4 id="ui-components">UI Components </h4>
+<ul>
+<li><strong>ThemedText.tsx / ThemedView.tsx</strong>: Theme-aware components</li>
+<li><strong>LoadingOverlay.js</strong>: Loading states</li>
+<li><strong>Modals</strong>: Various confirmation and input modals</li>
+</ul>
+<h3 id="3-service-layer">3. Service Layer </h3>
+<p><strong>Location</strong>: <code>/services</code> directory</p>
+<h4 id="routesafetyservicets">routeSafetyService.ts </h4>
+<ul>
+<li>OSM Overpass API integration</li>
+<li>OpenWeather API integration</li>
+<li>Multi-factor safety scoring algorithm</li>
+<li>Route segment analysis</li>
+<li>Caching and rate limiting</li>
+</ul>
+<h4 id="twilioservicets">twilioService.ts </h4>
+<ul>
+<li>WhatsApp message sending</li>
+<li>Emergency alert formatting</li>
+<li>Phone number validation</li>
+<li>Base64 encoding for auth</li>
+</ul>
+<h3 id="4-data-layer">4. Data Layer </h3>
+<p><strong>Location</strong>: <code>/config</code> directory</p>
+<h4 id="firebasets">firebase.ts </h4>
+<ul>
+<li>Firebase initialization</li>
+<li>Realtime Database setup</li>
+<li>Authentication configuration</li>
+<li>AsyncStorage persistence</li>
+</ul>
+<h4 id="local-storage-asyncstorage">Local Storage (AsyncStorage) </h4>
+<ul>
+<li>Contacts storage</li>
+<li>Saved places</li>
+<li>User preferences</li>
+<li>Sharing status</li>
+</ul>
+<h4 id="background-tasks-taskmanager">Background Tasks (TaskManager) </h4>
+<ul>
+<li>Location tracking</li>
+<li>Real-time updates</li>
+<li>Foreground service notifications</li>
+</ul>
+<hr>
+<h2 id="core-data-flows">Core Data Flows </h2>
+<h3 id="flow-1-route-calculation--safety-analysis">Flow 1: Route Calculation &amp; Safety Analysis </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User Input (Destination)
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ navigate.tsx (Main Screen)                                │
+│ - Validates location permissions                          │
+│ - Captures origin (current) &amp; destination coordinates     │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ calculateAndShowRoutes()                                  │
+│ - Calls getMultipleGoogleRoutes()                        │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Google Directions API                                     │
+│ - Fetches standard routes                                │
+│ - Fetches alternatives (avoid highways, tolls)           │
+│ - Returns polyline coordinates                           │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ decodePolyline()                                          │
+│ - Converts encoded polyline to coordinate array          │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ analyzeRouteSafety() (navigate.tsx)                      │
+│ - Samples route coordinates (every 5th point)            │
+│ - Calls calculateRouteSafetyScore()                      │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ routeSafetyService.ts                                     │
+│ calculateRouteSafetyScore()                               │
+│   ↓                                                        │
+│   For each segment (max 5 segments):                     │
+│   ├─ calculateSegmentSafetyScore()                       │
+│   │   ├─ getWeatherScore() → OpenWeather API            │
+│   │   ├─ getStreetLightingScore() → OSM API             │
+│   │   ├─ getPoliceStationsCount() → OSM API             │
+│   │   ├─ getHospitalsCount() → OSM API                  │
+│   │   ├─ getPublicTransportScore() → OSM API            │
+│   │   ├─ getResidentialDensityScore() → OSM API         │
+│   │   └─ Weighted scoring calculation                    │
+│   └─ 1 second delay between segments (rate limiting)     │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Route Scoring &amp; Sorting                                   │
+│ - Assigns safety score (0-5) to each route               │
+│ - Determines status: safe/caution/dangerous/unreviewed   │
+│ - Assigns color: green/yellow/red/blue                   │
+│ - Sorts by: safety score → duration                      │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ UI Update                                                  │
+│ - setRouteOptions() with scored routes                   │
+│ - Display RouteOptionsDisplay component                  │
+│ - Show safest route first                                │
+│ - Alert if all routes dangerous                          │
+└───────────────────────────────────────────────────────────┘
+</code></pre><h3 id="flow-2-safety-review-submission">Flow 2: Safety Review Submission </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User Long-Press on Map
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ MapDisplay.native.js                                      │
+│ - onLongPress event triggered                            │
+│ - Captures coordinate from event.nativeEvent.coordinate  │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ navigate.tsx                                              │
+│ - setReviewLocation(coordinate)                          │
+│ - setShowReviewModal(true)                               │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ SafetyReviewModal.js                                      │
+│ - User inputs:                                            │
+│   • Rating (1-5 stars)                                    │
+│   • Comment (text)                                        │
+│   • Category (crime/lighting/infrastructure/etc)         │
+│ - Validates input                                         │
+│ - Calls onSubmit callback                                │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ submitSafetyReview() (navigate.tsx)                      │
+│ - Gets current user ID from Firebase Auth                │
+│ - Creates review object with:                            │
+│   • latitude, longitude                                   │
+│   • rating, comment, category                            │
+│   • userId, timestamp                                     │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Firebase Realtime Database                                │
+│ - push() to "safety_reviews" node                        │
+│ - set() review data with serverTimestamp                 │
+│ - Returns unique key                                      │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Local State Update                                        │
+│ - Add review to safetyReviews array                      │
+│ - If rating ≤ 2: add to dangerousAreas array            │
+│ - Update map markers                                      │
+│ - Show success alert                                      │
+└───────────────────────────────────────────────────────────┘
+</code></pre><h3 id="flow-3-emergency-sos">Flow 3: Emergency SOS </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User Presses SOS Button
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ SOS.tsx                                                    │
+│ - onButtonPress() triggered                               │
+│ - setLoading(true)                                        │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Emergency Call                                             │
+│ - Linking.openURL('tel:122')                             │
+│ - Opens phone dialer with emergency number                │
+└───────────────────────────────────────────────────────────┘
+        ↓ (Parallel)
+┌───────────────────────────────────────────────────────────┐
+│ loadEmergencyContacts()                                   │
+│ - AsyncStorage.getItem(CONTACTS_STORAGE_KEY)             │
+│ - Parse JSON to Contact[] array                          │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Get Current Location                                       │
+│ - Location.requestForegroundPermissionsAsync()           │
+│ - Location.getCurrentPositionAsync()                     │
+│ - Extract lat, lng coordinates                           │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ sendLocationToAllContacts()                               │
+│ - Create emergency message with:                         │
+│   • "🚨 EMERGENCY SOS - Live Location"                   │
+│   • Latitude, Longitude                                   │
+│   • Google Maps link                                      │
+│ - Loop through all contacts                              │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ twilioService.ts                                          │
+│ sendWhatsAppLocationViaTwilio()                          │
+│   ↓                                                        │
+│   For each contact:                                       │
+│   ├─ Format phone number (add +91, whatsapp: prefix)    │
+│   ├─ Create URLSearchParams with From/To/Body           │
+│   ├─ Base64 encode credentials                          │
+│   ├─ POST to Twilio API                                 │
+│   ├─ Handle response/errors                             │
+│   └─ 500ms delay between messages                       │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Result Aggregation                                         │
+│ - Count successCount, failCount                          │
+│ - Track successContacts[], failedContacts[]              │
+│ - Show alert with results                                │
+└───────────────────────────────────────────────────────────┘
+</code></pre><h3 id="flow-4-live-location-sharing">Flow 4: Live Location Sharing </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User Navigates to LiveLocationShareScreen
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ LiveLocationShareScreen.tsx                               │
+│ - useEffect: loadContactsFromStorage()                   │
+│ - useEffect: loadSharingStatus()                         │
+│ - useEffect: Firebase Auth listener                      │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Firebase Authentication                                    │
+│ - onAuthStateChanged() listener                          │
+│ - If no user: signInAnonymously()                        │
+│ - Set currentUserId                                       │
+└───────────────────────────────────────────────────────────┘
+        ↓
+User Presses "Start Sharing"
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ handleStartSharing()                                      │
+│ - Validate currentUserId exists                          │
+│ - Validate contacts exist                                │
+│ - requestPermissions()                                    │
+│   ├─ Foreground location permission                      │
+│   └─ Background location permission                      │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Location.startLocationUpdatesAsync()                     │
+│ - Task: LOCATION_TRACKING_TASK                           │
+│ - Config:                                                 │
+│   • accuracy: Balanced                                    │
+│   • timeInterval: 10000ms                                │
+│   • distanceInterval: 10m                                │
+│   • foregroundService notification                       │
+│ - taskOptions:                                            │
+│   • sharingWithContacts: Contact[]                       │
+│   • userId: string                                        │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ TaskManager.defineTask() (Background)                     │
+│ - Runs in background/foreground                          │
+│ - Receives location updates                              │
+│ - Extracts: lat, lng, accuracy, speed, heading          │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Firebase Firestore                                         │
+│ - setDoc(doc(db, "live_locations", userId))              │
+│ - Merge: true (update existing document)                 │
+│ - Data:                                                    │
+│   • latitude, longitude, timestamp                       │
+│   • accuracy, speed, heading                             │
+│   • sharingWith: Contact[]                               │
+│   • serverTimestamp                                       │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ UI Updates (useFocusEffect)                               │
+│ - Interval: 5000ms                                        │
+│ - getCurrentPositionAsync() for display                  │
+│ - Update currentLocation state                           │
+│ - Show lat/lng/accuracy on screen                        │
+└───────────────────────────────────────────────────────────┘
+</code></pre><h3 id="flow-5-search--navigation">Flow 5: Search &amp; Navigation </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User Types in SearchBar
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ SearchBar.js                                              │
+│ - onChangeText updates searchQuery                       │
+│ - Debounced call to onSearch callback                    │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ searchPlaces() (navigate.tsx)                            │
+│ - Validates query not empty                              │
+│ - Validates API key exists                               │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Google Places Text Search API                             │
+│ - URL: /place/textsearch/json                            │
+│ - Params: query, key, locationbias                       │
+│ - Returns: results[] with place details                  │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Format Results                                             │
+│ - Map to SearchResult[] (top 5)                          │
+│ - Extract: id, title, subtitle, coordinate              │
+│ - setSearchResults()                                      │
+│ - setShowSearchResults(true)                             │
+└───────────────────────────────────────────────────────────┘
+        ↓
+User Selects Result
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ selectSearchResult()                                      │
+│ - setSelectedLocation(result)                            │
+│ - animateBottomSheet(true)                               │
+│ - mapRef.animateToRegion()                               │
+└───────────────────────────────────────────────────────────┘
+        ↓
+User Presses "Start Navigation" in BottomSheet
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ BottomSheet.js                                            │
+│ - onStartNavigation callback                             │
+│ - animateBottomSheet(false)                              │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ calculateAndShowRoutes()                                  │
+│ - [See Flow 1: Route Calculation]                        │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ RouteOptionsDisplay.js                                    │
+│ - Shows multiple route options                           │
+│ - Displays safety scores with colors                     │
+│ - User can select different route                        │
+│ - "Start Navigation" button                              │
+└───────────────────────────────────────────────────────────┘
+        ↓
+User Presses "Start Navigation"
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ startActualNavigation() (navigate.tsx)                   │
+│ - setIsNavigationMode(true)                              │
+│ - Location.watchPositionAsync()                          │
+│   • accuracy: High                                        │
+│   • timeInterval: 1000ms                                 │
+│   • distanceInterval: 10m                                │
+│ - setLocationWatcher()                                    │
+└───────────────────────────────────────────────────────────┘
+        ↓
+┌───────────────────────────────────────────────────────────┐
+│ Live Navigation Updates                                    │
+│ - Callback receives newLocation                          │
+│ - mapRef.animateCamera() to follow user                 │
+│ - Update center to user's position                       │
+│ - NavigationHeader shows route info                      │
+└───────────────────────────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="component-interaction-diagrams">Component Interaction Diagrams </h2>
+<h3 id="navigate-screen-component-tree">Navigate Screen Component Tree </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>navigate.tsx (Main Container)
+│
+├─ SearchBar.js
+│  └─ Shows search results dropdown
+│
+├─ MapDisplay.native.js
+│  ├─ MapView (react-native-maps)
+│  ├─ Marker (selected location)
+│  ├─ Marker[] (safety reviews)
+│  ├─ Circle[] (dangerous areas)
+│  ├─ Polyline (route)
+│  ├─ Marker[] (nearby police/hospitals)
+│  └─ My Location Button
+│
+├─ LoadingOverlay.js
+│  └─ Shows during route calculation
+│
+├─ NavigationHeader.js
+│  └─ Visible during active navigation
+│
+├─ RouteOptionsDisplay.js
+│  ├─ Route cards with safety scores
+│  ├─ SafetyToggle.js
+│  └─ Action buttons
+│
+├─ BottomSheet.js
+│  ├─ Location details
+│  └─ Action buttons (Navigate, Save, Share)
+│
+├─ SafetyReviewModal.js
+│  └─ SafetyReviewForm.js
+│
+├─ DirectionsModal.js
+│  └─ Turn-by-turn instructions list
+│
+├─ LongPressInstruction.js
+│  └─ Tooltip overlay
+│
+├─ NearestPlaceConfirmationModal.js
+│  └─ Single place confirmation
+│
+└─ MultiplePlacesModal.js
+   └─ List of nearby places
+</code></pre><h3 id="state-flow-in-navigate-screen">State Flow in Navigate Screen </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│                    LOCATION STATE                        │
+│ - location: LocationObject | null                       │
+│ - isLocationReady: boolean                              │
+│ - mapRegion: Region                                      │
+│ - currentRegionName: string                             │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│                    SEARCH STATE                          │
+│ - searchQuery: string                                    │
+│ - searchResults: SearchResult[]                         │
+│ - showSearchResults: boolean                            │
+│ - selectedLocation: SearchResult | null                 │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│                    ROUTE STATE                           │
+│ - routeCoordinates: Coordinate[]                        │
+│ - routeInfo: RouteInfo | null                           │
+│ - routeOptions: RouteInfo[]                             │
+│ - selectedRouteIndex: number                            │
+│ - isCalculatingRoute: boolean                           │
+│ - isNavigationMode: boolean                             │
+│ - directions: Direction[]                               │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│                    SAFETY STATE                          │
+│ - safetyReviews: SafetyReview[]                         │
+│ - dangerousAreas: DangerousArea[]                       │
+│ - safeRouteOnly: boolean                                │
+│ - showReviewModal: boolean                              │
+│ - reviewLocation: Coordinate | null                     │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│                    NEARBY STATE                          │
+│ - nearbyPoliceStations: SearchResult[]                  │
+│ - nearbyHospitals: SearchResult[]                       │
+│ - isLoadingNearby: boolean                              │
+│ - nearestPlaceDetails: any                              │
+│ - multiplePlacesList: any[]                             │
+└─────────────────────────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="state-management-flow">State Management Flow </h2>
+<h3 id="react-state-management-pattern">React State Management Pattern </h3>
+<p>SafeRoute uses <strong>local component state</strong> with React hooks (no Redux/MobX):</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│                    STATE HOOKS                           │
+│                                                           │
+│  useState() - Local component state                      │
+│  useEffect() - Side effects &amp; lifecycle                  │
+│  useCallback() - Memoized functions                      │
+│  useRef() - Refs for MapView &amp; animations               │
+│  useFocusEffect() - Navigation-aware effects            │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><h3 id="state-persistence-strategy">State Persistence Strategy </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌──────────────────┐
+│  AsyncStorage    │  ← Contacts, Saved Places, Settings
+├──────────────────┤
+│  Firebase RTDB   │  ← Safety Reviews (synced)
+├──────────────────┤
+│  Firestore       │  ← Live Locations (real-time)
+├──────────────────┤
+│  TaskManager     │  ← Background task state
+└──────────────────┘
+</code></pre><h3 id="cross-screen-communication">Cross-Screen Communication </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Navigation Params (route.params)
+        ↓
+┌─────────────────────────────────────────────────────────┐
+│ Home → Navigate                                          │
+│ - showPoliceStations: boolean                           │
+│ - showHospitals: boolean                                │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ SavedPlaces → Navigate                                   │
+│ - selectedPlaceForMap: Coordinate                       │
+│ - selectedPlaceTitle: string                            │
+│ - selectedPlaceSubtitle: string                         │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ Contacts → LiveLocationShare                             │
+│ - startSharing: boolean                                  │
+│ - targetContact: Contact                                │
+│ - shareWithAll: boolean                                  │
+└─────────────────────────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="external-service-integration">External Service Integration </h2>
+<h3 id="1-google-maps-services">1. Google Maps Services </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│              GOOGLE MAPS API INTEGRATION                 │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  Directions API                                          │
+│  ├─ Endpoint: /directions/json                          │
+│  ├─ Purpose: Calculate routes between points            │
+│  ├─ Returns: Polyline, distance, duration, steps        │
+│  └─ Usage: getMultipleGoogleRoutes()                    │
+│                                                           │
+│  Places Text Search API                                  │
+│  ├─ Endpoint: /place/textsearch/json                    │
+│  ├─ Purpose: Search for locations by name               │
+│  ├─ Returns: Place details, coordinates                 │
+│  └─ Usage: searchPlaces()                               │
+│                                                           │
+│  Places Nearby Search API                                │
+│  ├─ Endpoint: /place/nearbysearch/json                  │
+│  ├─ Purpose: Find nearby police/hospitals               │
+│  ├─ Returns: List of places within radius               │
+│  └─ Usage: getNearbyPlaces()                            │
+│                                                           │
+│  Maps SDK (Native)                                       │
+│  ├─ Library: react-native-maps                          │
+│  ├─ Provider: PROVIDER_GOOGLE                           │
+│  └─ Features: Markers, Polylines, Circles               │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><h3 id="2-openstreetmap-osm-overpass-api">2. OpenStreetMap (OSM) Overpass API </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│           OSM OVERPASS API INTEGRATION                   │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  Endpoint: https://overpass-api.de/api/interpreter      │
+│  Method: GET with data query parameter                  │
+│                                                           │
+│  Queries:                                                │
+│  ├─ Street Lighting                                      │
+│  │  └─ node["highway"="street_lamp"]                    │
+│  ├─ Police Stations                                      │
+│  │  └─ node["amenity"="police"]                         │
+│  ├─ Hospitals                                            │
+│  │  └─ node["amenity"="hospital"]                       │
+│  ├─ Public Transport                                     │
+│  │  ├─ node["highway"="bus_stop"]                       │
+│  │  ├─ node["railway"="station"]                        │
+│  │  └─ node["station"="subway"]                         │
+│  └─ Residential Buildings                                │
+│     └─ way["building"="residential"]                    │
+│                                                           │
+│  Rate Limiting:                                          │
+│  ├─ Min interval: 2000ms between requests               │
+│  ├─ Retry logic: Exponential backoff                    │
+│  ├─ Cache duration: 5 minutes                           │
+│  └─ Max segments: 5 per route                           │
+│                                                           │
+│  Bounding Box:                                           │
+│  └─ Format: (south,west,north,east)                     │
+│  └─ Radius: 0.5-1km around point                        │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><h3 id="3-openweather-api">3. OpenWeather API </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│           OPENWEATHER API INTEGRATION                    │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  Endpoint: /data/2.5/weather                            │
+│  Method: GET                                             │
+│                                                           │
+│  Parameters:                                             │
+│  ├─ lat: latitude                                        │
+│  ├─ lon: longitude                                       │
+│  ├─ units: metric                                        │
+│  └─ appid: API key                                       │
+│                                                           │
+│  Returns:                                                │
+│  ├─ weather[].main (Rain, Snow, Fog, etc)              │
+│  ├─ weather[].description                               │
+│  ├─ visibility (meters)                                 │
+│  └─ wind.speed (m/s)                                    │
+│                                                           │
+│  Scoring Logic:                                          │
+│  ├─ Start: 5 (perfect)                                  │
+│  ├─ Rain/Thunderstorm: -1.5                             │
+│  ├─ Snow: -2                                             │
+│  ├─ Fog/Mist: -1.5                                      │
+│  ├─ Visibility &lt; 1km: -1                                │
+│  ├─ Visibility &lt; 5km: -0.5                              │
+│  └─ Wind &gt; 15 m/s: -0.5                                 │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><h3 id="4-twilio-whatsapp-api">4. Twilio WhatsApp API </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│            TWILIO WHATSAPP INTEGRATION                   │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  Endpoint: /2010-04-01/Accounts/{SID}/Messages.json    │
+│  Method: POST                                            │
+│  Auth: Basic (Base64 encoded SID:Token)                 │
+│                                                           │
+│  Request Body (URLSearchParams):                        │
+│  ├─ From: whatsapp:+14155238886 (Sandbox)              │
+│  ├─ To: whatsapp:+91XXXXXXXXXX                          │
+│  └─ Body: Message text with location                    │
+│                                                           │
+│  Phone Number Formatting:                                │
+│  ├─ Remove non-digits (except +)                        │
+│  ├─ Add +91 if 10-digit number                          │
+│  └─ Prepend "whatsapp:" prefix                          │
+│                                                           │
+│  Error Handling:                                         │
+│  ├─ 400: Invalid number format                          │
+│  ├─ 401/403: Auth failed                                │
+│  ├─ 404: Number not found                               │
+│  └─ 21211: User not opted in to sandbox                 │
+│                                                           │
+│  Usage:                                                  │
+│  ├─ SOS emergency alerts                                │
+│  └─ Live location sharing                               │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><h3 id="5-firebase-services">5. Firebase Services </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│              FIREBASE INTEGRATION                        │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  Firebase Authentication                                 │
+│  ├─ Method: Anonymous sign-in                           │
+│  ├─ Persistence: AsyncStorage                           │
+│  ├─ Purpose: User identification                        │
+│  └─ Usage: Live location tracking                       │
+│                                                           │
+│  Firebase Realtime Database                              │
+│  ├─ Node: "safety_reviews"                              │
+│  ├─ Structure:                                           │
+│  │  └─ {reviewId}                                        │
+│  │     ├─ latitude: number                              │
+│  │     ├─ longitude: number                             │
+│  │     ├─ rating: number (1-5)                          │
+│  │     ├─ comment: string                               │
+│  │     ├─ category: string                              │
+│  │     ├─ userId: string                                │
+│  │     ├─ timestamp: serverTimestamp                    │
+│  │     └─ createdAt: ISO string                         │
+│  ├─ Operations:                                          │
+│  │  ├─ push(): Create new review                        │
+│  │  ├─ set(): Write review data                         │
+│  │  └─ get(): Load reviews (last 1000)                  │
+│  └─ Query: orderByChild("createdAt").limitToLast(1000) │
+│                                                           │
+│  Firebase Firestore                                      │
+│  ├─ Collection: "live_locations"                        │
+│  ├─ Document ID: userId                                 │
+│  ├─ Structure:                                           │
+│  │  ├─ latitude: number                                 │
+│  │  ├─ longitude: number                                │
+│  │  ├─ timestamp: number                                │
+│  │  ├─ accuracy: number                                 │
+│  │  ├─ speed: number                                    │
+│  │  ├─ heading: number                                  │
+│  │  ├─ sharingWith: Contact[]                           │
+│  │  ├─ isGeneralShare: boolean                          │
+│  │  └─ serverTimestamp: ISO string                      │
+│  └─ Operation: setDoc() with merge: true                │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="background-task-architecture">Background Task Architecture </h2>
+<h3 id="location-tracking-task-flow">Location Tracking Task Flow </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│                  TASK REGISTRATION                       │
+│                                                           │
+│  TaskManager.defineTask(LOCATION_TRACKING_TASK)         │
+│  ├─ Defined globally (outside component)                │
+│  ├─ Runs in background/foreground                       │
+│  └─ Has access to Firebase services                     │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│                  TASK ACTIVATION                         │
+│                                                           │
+│  Location.startLocationUpdatesAsync()                   │
+│  ├─ Task name: LOCATION_TRACKING_TASK                   │
+│  ├─ Configuration:                                       │
+│  │  ├─ accuracy: Balanced                               │
+│  │  ├─ timeInterval: 10000ms (10 sec)                  │
+│  │  ├─ distanceInterval: 10m                            │
+│  │  └─ deferredUpdatesInterval: 5000ms                 │
+│  ├─ Foreground Service:                                 │
+│  │  ├─ notificationTitle                                │
+│  │  ├─ notificationBody                                 │
+│  │  └─ notificationColor                                │
+│  └─ Task Options (custom data):                         │
+│     ├─ sharingWithContacts: Contact[]                   │
+│     ├─ isGeneralShare: boolean                          │
+│     └─ userId: string                                    │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│                  TASK EXECUTION                          │
+│                                                           │
+│  Callback receives:                                      │
+│  ├─ data.locations[]: Location[]                        │
+│  ├─ error: Error | null                                 │
+│  └─ executionInfo.taskOptions: custom data              │
+│                                                           │
+│  Process:                                                │
+│  1. Extract latest location                             │
+│  2. Get taskOptions (contacts, userId)                  │
+│  3. Create locationData object                          │
+│  4. Write to Firestore (setDoc with merge)             │
+│                                                           │
+│  Error Handling:                                         │
+│  └─ Log errors, continue running                        │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│                  TASK PERSISTENCE                        │
+│                                                           │
+│  AsyncStorage:                                           │
+│  └─ IS_SHARING_STORAGE_KEY: "true"/"false"              │
+│                                                           │
+│  On App Restart:                                         │
+│  ├─ loadSharingStatus()                                 │
+│  ├─ Check TaskManager.isTaskRegisteredAsync()          │
+│  └─ Restore UI state if task running                    │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│                  TASK TERMINATION                        │
+│                                                           │
+│  Location.stopLocationUpdatesAsync()                    │
+│  ├─ Stops background updates                            │
+│  ├─ Removes foreground notification                     │
+│  └─ Cleans up resources                                 │
+│                                                           │
+│  State Cleanup:                                          │
+│  ├─ setIsSharing(false)                                 │
+│  ├─ AsyncStorage.setItem(IS_SHARING_KEY, "false")      │
+│  └─ Clear location data                                 │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><h3 id="firebase-initialization-in-background-context">Firebase Initialization in Background Context </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│         FIREBASE BACKGROUND INITIALIZATION               │
+│                                                           │
+│  Problem: Background tasks run in separate context      │
+│  Solution: Initialize Firebase globally                 │
+│                                                           │
+│  if (getApps().length === 0) {                          │
+│    // First initialization                              │
+│    firebaseApp = initializeApp(config)                  │
+│    db = getFirestore(firebaseApp)                       │
+│    auth = getAuth(firebaseApp)                          │
+│  } else {                                                │
+│    // Use existing app                                  │
+│    firebaseApp = getApps()[0]                           │
+│    db = getFirestore(firebaseApp)                       │
+│    auth = getAuth(firebaseApp)                          │
+│  }                                                        │
+│                                                           │
+│  Auth State Listener (Global):                          │
+│  auth.onAuthStateChanged((user) =&gt; {                    │
+│    currentFirebaseUserId = user?.uid || null            │
+│  })                                                       │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="safety-scoring-algorithm">Safety Scoring Algorithm </h2>
+<h3 id="multi-factor-weighted-scoring">Multi-Factor Weighted Scoring </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│              SAFETY SCORE CALCULATION                    │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  Input Factors (0-5 scale):                             │
+│  ├─ baseScore: User reviews (30% weight)                │
+│  ├─ streetLighting: OSM lamp density (20% weight)       │
+│  ├─ policeStations: Count within 1km (15% weight)       │
+│  ├─ hospitals: Count within 1km (10% weight)            │
+│  ├─ publicTransport: Stops/stations (10% weight)        │
+│  ├─ weather: Current conditions (10% weight)            │
+│  └─ residentialDensity: Building count (5% weight)      │
+│                                                           │
+│  Formula:                                                │
+│  finalScore = Σ(factor × weight)                        │
+│                                                           │
+│  Normalization:                                          │
+│  ├─ Police/Hospital: min(5, count × 1.5)               │
+│  └─ Final: clamp(0, 5)                                  │
+│                                                           │
+│  Status Determination:                                   │
+│  ├─ score ≥ 4.0: "safe" (green)                        │
+│  ├─ score ≥ 2.5: "caution" (yellow)                    │
+│  ├─ score &lt; 2.5: "dangerous" (red)                     │
+│  └─ baseScore = 0: "unreviewed" (blue)                 │
+│                                                           │
+│  Route Overall Status:                                   │
+│  ├─ Any segment dangerous: "dangerous"                  │
+│  ├─ Danger % &gt; 10: "caution"                            │
+│  ├─ Avg score ≥ 4: "safe"                               │
+│  └─ 70% unreviewed: "unreviewed"                        │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><h3 id="route-sampling-strategy">Route Sampling Strategy </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>To avoid API rate limits:
+
+1. Max 5 segments per route
+2. Sample interval = max(20, routeLength / 5)
+3. Always include start and end points
+4. 1 second delay between segment calculations
+5. 300ms delay between OSM queries within segment
+6. Cache results for 5 minutes
+</code></pre><hr>
+<h2 id="performance-optimizations">Performance Optimizations </h2>
+<h3 id="1-api-rate-limiting--caching">1. API Rate Limiting &amp; Caching </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>OSM Overpass API:
+├─ Rate limit: 2000ms minimum between requests
+├─ Cache duration: 5 minutes
+├─ Cache key: queryType_roundedLat_roundedLng
+├─ Retry logic: Exponential backoff (max 3 retries)
+└─ Timeout: 15 seconds per request
+
+Google APIs:
+├─ No explicit rate limiting (paid tier)
+└─ Results cached in component state
+
+Weather API:
+└─ Called once per route segment
+</code></pre><h3 id="2-route-calculation-optimization">2. Route Calculation Optimization </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Polyline Decoding:
+└─ Efficient algorithm (O(n) complexity)
+
+Route Deduplication:
+├─ Compare distance (±0.5km tolerance)
+└─ Compare duration (±2min tolerance)
+
+Segment Sampling:
+├─ Max 5 segments per route
+└─ Reduces API calls by 80-90%
+</code></pre><h3 id="3-map-rendering-optimization">3. Map Rendering Optimization </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>react-native-maps:
+├─ PROVIDER_GOOGLE for native performance
+├─ Polyline with zIndex for proper layering
+├─ Marker clustering (implicit via limited markers)
+└─ AnimateToRegion for smooth transitions
+
+State Updates:
+├─ useCallback for memoized functions
+├─ useRef for MapView reference
+└─ Conditional rendering based on state
+</code></pre><h3 id="4-background-task-efficiency">4. Background Task Efficiency </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Location Updates:
+├─ Balanced accuracy (not High)
+├─ 10 second time interval
+├─ 10 meter distance interval
+└─ Deferred updates: 5 seconds
+
+Firestore Writes:
+├─ setDoc with merge: true (upsert)
+└─ Single document per user (no collection growth)
+</code></pre><hr>
+<h2 id="security-considerations">Security Considerations </h2>
+<h3 id="1-api-key-management">1. API Key Management </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Environment Variables:
+├─ .env file (not committed)
+├─ app.json extras (for Expo)
+└─ process.env.EXPO_PUBLIC_* prefix
+
+Fallback Chain:
+process.env → Constants.expoConfig.extra → Constants.expoConfig.android/ios
+</code></pre><h3 id="2-firebase-security">2. Firebase Security </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Authentication:
+├─ Anonymous auth for basic access
+└─ User ID for data isolation
+
+Realtime Database Rules:
+├─ Read: Public (safety reviews)
+└─ Write: Authenticated users only
+
+Firestore Rules:
+├─ Read: User's own document
+└─ Write: User's own document
+</code></pre><h3 id="3-location-privacy">3. Location Privacy </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Live Sharing:
+├─ Explicit user consent required
+├─ Foreground notification always visible
+├─ User can stop sharing anytime
+└─ Data deleted when sharing stops
+
+Location Data:
+├─ Stored with user consent
+├─ Shared only with selected contacts
+└─ Not publicly accessible
+</code></pre><hr>
+<h2 id="error-handling-strategy">Error Handling Strategy </h2>
+<h3 id="1-network-errors">1. Network Errors </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>API Failures:
+├─ Try-catch blocks around all fetch calls
+├─ Fallback to cached data when available
+├─ User-friendly error messages
+└─ Graceful degradation (continue with partial data)
+</code></pre><h3 id="2-permission-errors">2. Permission Errors </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Location Permissions:
+├─ Check before requesting
+├─ Explain why permission needed
+├─ Provide manual settings link
+└─ Disable features if denied
+
+Background Permission:
+├─ Request after foreground granted
+├─ Show detailed explanation
+└─ Alert if denied (required for live sharing)
+</code></pre><h3 id="3-data-errors">3. Data Errors </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Firebase Errors:
+├─ Catch and log all errors
+├─ Fallback to local mock data
+├─ Continue app functionality
+└─ Retry on next app launch
+
+AsyncStorage Errors:
+├─ Try-catch on all operations
+├─ Default values if read fails
+└─ Log errors for debugging
+</code></pre><hr>
+<h2 id="deployment-architecture">Deployment Architecture </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────────────────────┐
+│                    BUILD PROCESS                         │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  Development:                                            │
+│  ├─ expo start (Metro bundler)                          │
+│  ├─ expo start --android                                │
+│  └─ expo start --ios                                    │
+│                                                           │
+│  Production Build:                                       │
+│  ├─ eas build --platform android                        │
+│  ├─ eas build --platform ios                            │
+│  └─ expo export:web (PWA)                               │
+│                                                           │
+│  Configuration:                                          │
+│  ├─ app.json: App metadata, API keys                    │
+│  ├─ eas.json: Build profiles                            │
+│  └─ .env: Environment variables                         │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="future-architecture-considerations">Future Architecture Considerations </h2>
+<h3 id="scalability-improvements">Scalability Improvements </h3>
+<ol>
+<li><strong>State Management</strong>: Consider Redux/Zustand for complex state</li>
+<li><strong>API Gateway</strong>: Implement backend proxy for API key security</li>
+<li><strong>Caching Layer</strong>: Redis for shared cache across users</li>
+<li><strong>Real-time Updates</strong>: WebSocket for live safety alerts</li>
+<li><strong>Offline Mode</strong>: IndexedDB for full offline functionality</li>
+</ol>
+<h3 id="performance-enhancements">Performance Enhancements </h3>
+<ol>
+<li><strong>Route Calculation</strong>: Move to backend service</li>
+<li><strong>Map Clustering</strong>: Implement marker clustering for dense areas</li>
+<li><strong>Lazy Loading</strong>: Code splitting for faster initial load</li>
+<li><strong>Image Optimization</strong>: Compress and lazy load images</li>
+</ol>
+<h3 id="feature-additions">Feature Additions </h3>
+<ol>
+<li><strong>User Profiles</strong>: Full authentication with profiles</li>
+<li><strong>Social Features</strong>: Friend system, shared routes</li>
+<li><strong>Analytics</strong>: Track popular routes, safety trends</li>
+<li><strong>ML Integration</strong>: Predictive safety scoring</li>
+<li><strong>Voice Navigation</strong>: Turn-by-turn voice guidance</li>
+</ol>
+<hr>
+<h2 id="conclusion">Conclusion </h2>
+<p>SafeRoute's architecture is designed for:</p>
+<ul>
+<li><strong>Modularity</strong>: Clear separation of concerns across layers</li>
+<li><strong>Scalability</strong>: Can handle growing user base and features</li>
+<li><strong>Maintainability</strong>: Well-organized code with clear patterns</li>
+<li><strong>Performance</strong>: Optimized API usage and rendering</li>
+<li><strong>Reliability</strong>: Robust error handling and fallbacks</li>
+<li><strong>Security</strong>: Proper API key management and data privacy</li>
+</ul>
+<p>The architecture leverages modern React Native patterns, external APIs for rich functionality, and Firebase for real-time data synchronization, creating a comprehensive safety-focused navigation application.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

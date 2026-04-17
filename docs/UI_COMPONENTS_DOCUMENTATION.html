@@ -1,0 +1,989 @@
+<!DOCTYPE html><html><head>
+      <title>UI_COMPONENTS_DOCUMENTATION</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\adity\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="saferoute---ui-components--pages-documentation">SafeRoute - UI Components &amp; Pages Documentation </h1>
+<p>Complete reference for all UI components and application pages in SafeRoute.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents </h2>
+<ol>
+<li><a href="#application-pages">Application Pages</a></li>
+<li><a href="#map-components">Map Components</a></li>
+<li><a href="#ui-components">UI Components</a></li>
+<li><a href="#themed-components">Themed Components</a></li>
+</ol>
+<hr>
+<h2 id="application-pages">Application Pages </h2>
+<h3 id="1-home-page">1. Home Page </h3>
+<p><strong>File:</strong> <code>app/(tabs)/Home.tsx</code></p>
+<p><strong>Purpose:</strong> Main dashboard with quick access to emergency features and navigation.</p>
+<p><strong>Props:</strong> None (Root screen)</p>
+<p><strong>State:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  Loading<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  showHelplineModal<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  fontsLoaded<span class="token operator">:</span> <span class="token builtin">boolean</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Features:</strong></p>
+<ul>
+<li>Emergency helpline numbers modal</li>
+<li>Quick navigation to contacts</li>
+<li>Live location sharing</li>
+<li>Nearby police stations/hospitals</li>
+<li>Community safety message</li>
+</ul>
+<p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Accessed via tab navigation</span>
+<span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">"Home"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>HomePage<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>UI Elements:</strong></p>
+<ul>
+<li><strong>Add Contacts Button</strong>: Navigate to contacts screen</li>
+<li><strong>Share Location Button</strong>: Start live location sharing</li>
+<li><strong>Helpline Numbers Button</strong>: Display emergency contacts</li>
+<li><strong>Police Station Near Me</strong>: Find nearby police stations</li>
+<li><strong>Hospital Near Me</strong>: Find nearby hospitals</li>
+</ul>
+<p><strong>Styling:</strong></p>
+<ul>
+<li>Background: Gradient overlay (#AC1754)</li>
+<li>Card: White with rounded corners (60px top radius)</li>
+<li>Buttons: Pink theme (#F37199, #E53888)</li>
+<li>Fonts: Magesta (headers), Lufga (body)</li>
+</ul>
+<hr>
+<h3 id="2-navigate-safemaps">2. Navigate (SafeMaps) </h3>
+<p><strong>File:</strong> <code>app/(tabs)/navigate.tsx</code></p>
+<p><strong>Purpose:</strong> Main navigation screen with safety-aware routing and map display.</p>
+<p><strong>Props:</strong> Route params from navigation</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  showPoliceStations<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  showHospitals<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  selectedPlaceForMap<span class="token operator">?</span><span class="token operator">:</span> Coordinate<span class="token punctuation">,</span>
+  selectedPlaceTitle<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  selectedPlaceSubtitle<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>State:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  location<span class="token operator">:</span> Location<span class="token punctuation">.</span>LocationObject <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  isLocationReady<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  mapRegion<span class="token operator">:</span> Region <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  searchQuery<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  searchResults<span class="token operator">:</span> SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  selectedLocation<span class="token operator">:</span> SearchResult <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  routeCoordinates<span class="token operator">:</span> Coordinate<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  routeOptions<span class="token operator">:</span> RouteInfo<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  selectedRouteIndex<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+  isNavigationMode<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  safetyReviews<span class="token operator">:</span> SafetyReview<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  dangerousAreas<span class="token operator">:</span> DangerousArea<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  safeRouteOnly<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  showReviewModal<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  nearbyPoliceStations<span class="token operator">:</span> SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  nearbyHospitals<span class="token operator">:</span> SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Key Functions:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Get current GPS location</span>
+<span class="token function">getCurrentLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Search for places</span>
+<span class="token function">searchPlaces</span><span class="token punctuation">(</span>query<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Calculate multiple route options</span>
+<span class="token function">getMultipleGoogleRoutes</span><span class="token punctuation">(</span>origin<span class="token punctuation">,</span> destination<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>RouteInfo<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Analyze route safety</span>
+<span class="token function">analyzeRouteSafety</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>SafetyAnalysis<span class="token operator">&gt;</span>
+
+<span class="token comment">// Start navigation</span>
+<span class="token function">startActualNavigation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Submit safety review</span>
+<span class="token function">submitSafetyReview</span><span class="token punctuation">(</span>lat<span class="token punctuation">,</span> lng<span class="token punctuation">,</span> rating<span class="token punctuation">,</span> comment<span class="token punctuation">,</span> category<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Navigate with params</span>
+navigation<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">"navigate"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> 
+  showPoliceStations<span class="token operator">:</span> <span class="token boolean">true</span> 
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Navigate to saved place</span>
+navigation<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">"navigate"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  selectedPlaceForMap<span class="token operator">:</span> <span class="token punctuation">{</span> latitude<span class="token operator">:</span> <span class="token number">23.2599</span><span class="token punctuation">,</span> longitude<span class="token operator">:</span> <span class="token number">77.4126</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  selectedPlaceTitle<span class="token operator">:</span> <span class="token string">"DB City Mall"</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>UI Layout:</strong></p>
+<ul>
+<li><strong>SearchBar</strong>: Top overlay for place search</li>
+<li><strong>MapDisplay</strong>: Full-screen map with markers</li>
+<li><strong>Quick Action Buttons</strong>: Police/Hospital shortcuts (right side)</li>
+<li><strong>RouteOptionsDisplay</strong>: Bottom sheet with route alternatives</li>
+<li><strong>BottomSheet</strong>: Location details and actions</li>
+<li><strong>NavigationHeader</strong>: Active navigation info</li>
+</ul>
+<hr>
+<h3 id="3-contacts-screen">3. Contacts Screen </h3>
+<p><strong>File:</strong> <code>app/(tabs)/contacts.tsx</code></p>
+<p><strong>Purpose:</strong> Manage emergency contacts for SOS and location sharing.</p>
+<p><strong>Props:</strong> None (Tab screen)</p>
+<p><strong>State:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  contacts<span class="token operator">:</span> Contact<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  phone<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  editingId<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  dialogVisible<span class="token operator">:</span> <span class="token builtin">boolean</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Contact Type:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-type">type</span> <span class="token class-name">Contact</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  phone<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Key Functions:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Add new contact</span>
+<span class="token function">handleAddContact</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span>
+
+<span class="token comment">// Edit existing contact</span>
+<span class="token function">handleEdit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span>
+
+<span class="token comment">// Delete contact</span>
+<span class="token function">handleDelete</span><span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span>
+
+<span class="token comment">// Call contact</span>
+<span class="token function">handleCall</span><span class="token punctuation">(</span>phoneNumber<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span>
+
+<span class="token comment">// Share location via WhatsApp</span>
+<span class="token function">handleShareViaWhatsApp</span><span class="token punctuation">(</span>contact<span class="token operator">:</span> Contact<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Share live location</span>
+<span class="token function">handleShareLiveLocation</span><span class="token punctuation">(</span>contact<span class="token operator">:</span> Contact<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Add contact</span>
+<span class="token operator">&lt;</span>TextInput value<span class="token operator">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span> onChangeText<span class="token operator">=</span><span class="token punctuation">{</span>setName<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>TextInput value<span class="token operator">=</span><span class="token punctuation">{</span>phone<span class="token punctuation">}</span> onChangeText<span class="token operator">=</span><span class="token punctuation">{</span>setPhone<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>Button onPress<span class="token operator">=</span><span class="token punctuation">{</span>handleAddContact<span class="token punctuation">}</span><span class="token operator">&gt;</span>Add Contact<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>
+
+<span class="token comment">// Contact actions</span>
+<span class="token operator">&lt;</span>IconButton icon<span class="token operator">=</span><span class="token string">"phone"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">handleCall</span><span class="token punctuation">(</span>contact<span class="token punctuation">.</span>phone<span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>IconButton icon<span class="token operator">=</span><span class="token string">"whatsapp"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">handleShareViaWhatsApp</span><span class="token punctuation">(</span>contact<span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>IconButton icon<span class="token operator">=</span><span class="token string">"share-variant"</span> onPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">handleShareLiveLocation</span><span class="token punctuation">(</span>contact<span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>UI Elements:</strong></p>
+<ul>
+<li><strong>Quick Share Buttons</strong>: Share with all contacts</li>
+<li><strong>Add Contact Form</strong>: Name and phone input</li>
+<li><strong>Contact Cards</strong>: Display saved contacts with actions</li>
+<li><strong>Action Icons</strong>: Call, WhatsApp, Share, Edit, Delete</li>
+</ul>
+<p><strong>Storage:</strong></p>
+<ul>
+<li>Uses AsyncStorage with key: <code>@SafeRoute:contacts</code></li>
+<li>Persists across app sessions</li>
+</ul>
+<hr>
+<h3 id="4-sos-screen">4. SOS Screen </h3>
+<p><strong>File:</strong> <code>app/(tabs)/SOS.tsx</code></p>
+<p><strong>Purpose:</strong> Emergency SOS with automatic location sharing to all contacts.</p>
+<p><strong>Props:</strong> None (Tab screen)</p>
+<p><strong>State:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  Loading<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  fontsLoaded<span class="token operator">:</span> <span class="token builtin">boolean</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Key Functions:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Load emergency contacts</span>
+<span class="token function">loadEmergencyContacts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>Contact<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Send location to all contacts</span>
+<span class="token function">sendLocationToAllContacts</span><span class="token punctuation">(</span>contacts<span class="token operator">:</span> Contact<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token punctuation">{</span>
+  successCount<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+  failCount<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+  successContacts<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  failedContacts<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Make emergency call</span>
+<span class="token function">onButtonPress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Emergency button press</span>
+<span class="token operator">&lt;</span>Button 
+  onPress<span class="token operator">=</span><span class="token punctuation">{</span>onButtonPress<span class="token punctuation">}</span>
+  loading<span class="token operator">=</span><span class="token punctuation">{</span>Loading<span class="token punctuation">}</span>
+  style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> backgroundColor<span class="token operator">:</span> <span class="token string">'#e74c3c'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&gt;</span>
+  Emergency Call
+<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>
+</code></pre><p><strong>Behavior:</strong></p>
+<ol>
+<li>Makes emergency call to 122</li>
+<li>Gets current GPS location</li>
+<li>Sends location to all saved contacts via WhatsApp</li>
+<li>Shows success/failure summary</li>
+</ol>
+<p><strong>UI Elements:</strong></p>
+<ul>
+<li><strong>Emergency Alert Image</strong>: Visual indicator</li>
+<li><strong>Emergency Call Button</strong>: Red button (disabled while loading)</li>
+<li><strong>Status Text</strong>: Updates during call/sharing</li>
+</ul>
+<hr>
+<h3 id="5-saved-places-screen">5. Saved Places Screen </h3>
+<p><strong>File:</strong> <code>app/SavedPlacesScreen.tsx</code></p>
+<p><strong>Purpose:</strong> View and manage saved locations for quick navigation.</p>
+<p><strong>Props:</strong> Navigation props</p>
+<p><strong>State:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  savedPlaces<span class="token operator">:</span> SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  loading<span class="token operator">:</span> <span class="token builtin">boolean</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Key Functions:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Load saved places</span>
+<span class="token function">loadSavedPlaces</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Navigate to place</span>
+<span class="token function">handleNavigateToPlace</span><span class="token punctuation">(</span>place<span class="token operator">:</span> SearchResult<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span>
+
+<span class="token comment">// Delete saved place</span>
+<span class="token function">handleDeletePlace</span><span class="token punctuation">(</span>placeId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Navigate to saved place</span>
+navigation<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">"SavedPlacesScreen"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Select place for navigation</span>
+<span class="token function">handleNavigateToPlace</span><span class="token punctuation">(</span>place<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Navigates back to map with place coordinates</span>
+</code></pre><p><strong>Storage:</strong></p>
+<ul>
+<li>AsyncStorage key: <code>savedLocations</code></li>
+<li>Stores array of SearchResult objects</li>
+</ul>
+<hr>
+<h3 id="6-live-location-share-screen">6. Live Location Share Screen </h3>
+<p><strong>File:</strong> <code>app/LiveLocationShareScreen.tsx</code></p>
+<p><strong>Purpose:</strong> Share real-time GPS location with contacts via Firebase.</p>
+<p><strong>Props:</strong> Route params</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  startSharing<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  targetContact<span class="token operator">?</span><span class="token operator">:</span> Contact<span class="token punctuation">,</span>
+  shareWithAll<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>State:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  isSharing<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  currentLocation<span class="token operator">:</span> Location<span class="token punctuation">.</span>LocationObject <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  sessionId<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  selectedContacts<span class="token operator">:</span> Contact<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  statusMessage<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Key Functions:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Start location sharing</span>
+<span class="token function">startLocationSharing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Stop location sharing</span>
+<span class="token function">stopLocationSharing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Update location in Firebase</span>
+<span class="token function">updateLocationInFirebase</span><span class="token punctuation">(</span>location<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// Start background tracking</span>
+<span class="token function">startBackgroundTracking</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Start sharing with specific contact</span>
+navigation<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">"LiveLocationShareScreen"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  startSharing<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  targetContact<span class="token operator">:</span> contact
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Share with all contacts</span>
+navigation<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">"LiveLocationShareScreen"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  startSharing<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  shareWithAll<span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Firebase Integration:</strong></p>
+<ul>
+<li>Realtime Database path: <code>live_locations/{sessionId}</code></li>
+<li>Updates every 10 seconds or 10 meters</li>
+<li>Background tracking with foreground service</li>
+</ul>
+<hr>
+<h2 id="map-components">Map Components </h2>
+<h3 id="1-mapdisplay">1. MapDisplay </h3>
+<p><strong>File:</strong> <code>components/maps/MapDisplay.js</code></p>
+<p><strong>Purpose:</strong> Renders interactive map with markers, routes, and safety overlays.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  mapRef<span class="token operator">:</span> React<span class="token punctuation">.</span>RefObject<span class="token punctuation">,</span>
+  initialRegion<span class="token operator">:</span> Region<span class="token punctuation">,</span>
+  selectedLocation<span class="token operator">:</span> SearchResult <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  safetyReviews<span class="token operator">:</span> SafetyReview<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  dangerousAreas<span class="token operator">:</span> DangerousArea<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  routeCoordinates<span class="token operator">:</span> Coordinate<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  routeColor<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onLongPress</span><span class="token operator">:</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onMyLocationPress</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  nearbyPoliceStations<span class="token operator">:</span> SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  nearbyHospitals<span class="token operator">:</span> SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>MapDisplay
+  mapRef<span class="token operator">=</span><span class="token punctuation">{</span>mapRef<span class="token punctuation">}</span>
+  initialRegion<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    latitude<span class="token operator">:</span> <span class="token number">23.2599</span><span class="token punctuation">,</span>
+    longitude<span class="token operator">:</span> <span class="token number">77.4126</span><span class="token punctuation">,</span>
+    latitudeDelta<span class="token operator">:</span> <span class="token number">0.0922</span><span class="token punctuation">,</span>
+    longitudeDelta<span class="token operator">:</span> <span class="token number">0.0421</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  selectedLocation<span class="token operator">=</span><span class="token punctuation">{</span>selectedLocation<span class="token punctuation">}</span>
+  safetyReviews<span class="token operator">=</span><span class="token punctuation">{</span>safetyReviews<span class="token punctuation">}</span>
+  dangerousAreas<span class="token operator">=</span><span class="token punctuation">{</span>dangerousAreas<span class="token punctuation">}</span>
+  routeCoordinates<span class="token operator">=</span><span class="token punctuation">{</span>routeCoordinates<span class="token punctuation">}</span>
+  routeColor<span class="token operator">=</span><span class="token string">"#4CAF50"</span>
+  onLongPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setReviewLocation</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>nativeEvent<span class="token punctuation">.</span>coordinate<span class="token punctuation">)</span><span class="token punctuation">}</span>
+  onMyLocationPress<span class="token operator">=</span><span class="token punctuation">{</span>getCurrentLocation<span class="token punctuation">}</span>
+  nearbyPoliceStations<span class="token operator">=</span><span class="token punctuation">{</span>nearbyPoliceStations<span class="token punctuation">}</span>
+  nearbyHospitals<span class="token operator">=</span><span class="token punctuation">{</span>nearbyHospitals<span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Map Features:</strong></p>
+<ul>
+<li><strong>User Location</strong>: Blue dot with accuracy circle</li>
+<li><strong>Selected Location</strong>: Primary marker (pink)</li>
+<li><strong>Safety Reviews</strong>: Color-coded markers (red/yellow/green)</li>
+<li><strong>Dangerous Areas</strong>: Red circles with transparency</li>
+<li><strong>Route Polyline</strong>: Colored based on safety score</li>
+<li><strong>Nearby Places</strong>: Purple (police), Green (hospitals)</li>
+<li><strong>My Location Button</strong>: Bottom-right floating button</li>
+</ul>
+<p><strong>Marker Colors:</strong></p>
+<ul>
+<li>Primary: <code>#f661ab</code> (selected location)</li>
+<li>Danger: <code>#FF4444</code> (rating ≤ 2)</li>
+<li>Warning: <code>#FFC107</code> (rating 2-4)</li>
+<li>Success: <code>#4CAF50</code> (rating ≥ 4)</li>
+<li>Secondary: <code>#cd43d2</code> (police stations)</li>
+</ul>
+<hr>
+<h3 id="2-routeoptionsdisplay">2. RouteOptionsDisplay </h3>
+<p><strong>File:</strong> <code>components/maps/RouteOptionDisplay.js</code></p>
+<p><strong>Purpose:</strong> Display multiple route alternatives with safety scores.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  isVisible<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  routeOptions<span class="token operator">:</span> RouteInfo<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  selectedRouteIndex<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onSelectRoute</span><span class="token operator">:</span> <span class="token punctuation">(</span>index<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onViewDirections</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onStartNavigation</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onRecalculateRoute</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  safeRouteOnly<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onToggleSafeRouteOnly</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>RouteOptionsDisplay
+  isVisible<span class="token operator">=</span><span class="token punctuation">{</span>routeOptions<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isNavigationMode<span class="token punctuation">}</span>
+  routeOptions<span class="token operator">=</span><span class="token punctuation">{</span>routeOptions<span class="token punctuation">}</span>
+  selectedRouteIndex<span class="token operator">=</span><span class="token punctuation">{</span>selectedRouteIndex<span class="token punctuation">}</span>
+  onSelectRoute<span class="token operator">=</span><span class="token punctuation">{</span>selectRouteOption<span class="token punctuation">}</span>
+  onViewDirections<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setShowDirectionsModal</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+  onStartNavigation<span class="token operator">=</span><span class="token punctuation">{</span>startActualNavigation<span class="token punctuation">}</span>
+  onRecalculateRoute<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">calculateAndShowRoutes</span><span class="token punctuation">(</span>destination<span class="token punctuation">)</span><span class="token punctuation">}</span>
+  safeRouteOnly<span class="token operator">=</span><span class="token punctuation">{</span>safeRouteOnly<span class="token punctuation">}</span>
+  onToggleSafeRouteOnly<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setSafeRouteOnly</span><span class="token punctuation">(</span><span class="token operator">!</span>safeRouteOnly<span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Route Card Display:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────┐
+│ ⏱️ 25 min   ✅  │
+│ Primary Route   │
+│ 📍 5.2 km       │
+│ 🛡️ Score 4.5/5  │
+│ ✅ Good         │
+└─────────────────┘
+</code></pre><p><strong>UI Elements:</strong></p>
+<ul>
+<li><strong>Horizontal Scroll</strong>: Swipe through route options</li>
+<li><strong>Route Cards</strong>: Time, distance, safety score</li>
+<li><strong>Status Badge</strong>: Emoji indicator (⚠️/⚡/✅)</li>
+<li><strong>Safety Score</strong>: Prominent display with color</li>
+<li><strong>Action Buttons</strong>: Directions, Start Navigation</li>
+<li><strong>Recalculate Button</strong>: Refresh routes</li>
+<li><strong>Safety Toggle</strong>: Prioritize safe routes</li>
+</ul>
+<p><strong>Styling:</strong></p>
+<ul>
+<li>Selected route: Blue border, scaled up</li>
+<li>Safety colors: Red (&lt; 2.5), Yellow (2.5-4), Green (≥ 4)</li>
+<li>Bottom sheet: White background, rounded top</li>
+</ul>
+<hr>
+<h3 id="3-bottomsheet">3. BottomSheet </h3>
+<p><strong>File:</strong> <code>components/maps/BottomSheet.js</code></p>
+<p><strong>Purpose:</strong> Display selected location details with action buttons.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  showBottomSheet<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  bottomSheetAnim<span class="token operator">:</span> Animated<span class="token punctuation">.</span>Value<span class="token punctuation">,</span>
+  selectedLocation<span class="token operator">:</span> SearchResult <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onStartNavigation</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onSaveLocation</span><span class="token operator">:</span> <span class="token punctuation">(</span>location<span class="token operator">:</span> SearchResult<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onShareLocation</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onClose</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>BottomSheet
+  showBottomSheet<span class="token operator">=</span><span class="token punctuation">{</span>showBottomSheet<span class="token punctuation">}</span>
+  bottomSheetAnim<span class="token operator">=</span><span class="token punctuation">{</span>bottomSheetAnim<span class="token punctuation">}</span>
+  selectedLocation<span class="token operator">=</span><span class="token punctuation">{</span>selectedLocation<span class="token punctuation">}</span>
+  onStartNavigation<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">calculateAndShowRoutes</span><span class="token punctuation">(</span>selectedLocation<span class="token punctuation">.</span>coordinate<span class="token punctuation">)</span><span class="token punctuation">}</span>
+  onSaveLocation<span class="token operator">=</span><span class="token punctuation">{</span>handleSaveLocation<span class="token punctuation">}</span>
+  onShareLocation<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">handleShareLocation</span><span class="token punctuation">(</span>selectedLocation<span class="token punctuation">)</span><span class="token punctuation">}</span>
+  onClose<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">animateBottomSheet</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>UI Layout:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────┐
+│      ─────              │ (Handle)
+│                         │
+│  DB City Mall           │ (Title)
+│  Zone-I, Bhopal         │ (Subtitle)
+│                         │
+│  🛡️      💾      📤     │
+│  Safe    Save   Share   │
+│  Route                  │
+└─────────────────────────┘
+</code></pre><p><strong>Actions:</strong></p>
+<ul>
+<li><strong>Safe Route</strong>: Calculate and display routes</li>
+<li><strong>Save</strong>: Add to saved places</li>
+<li><strong>Share</strong>: Share location via native share sheet</li>
+</ul>
+<p><strong>Animation:</strong></p>
+<ul>
+<li>Slides up from bottom with spring animation</li>
+<li>Swipe down handle to close</li>
+<li>300ms duration</li>
+</ul>
+<hr>
+<h3 id="4-searchbar">4. SearchBar </h3>
+<p><strong>File:</strong> <code>components/maps/SearchBar.js</code></p>
+<p><strong>Purpose:</strong> Search for places with autocomplete dropdown.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  searchQuery<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">setSearchQuery</span><span class="token operator">:</span> <span class="token punctuation">(</span>query<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  searchResults<span class="token operator">:</span> SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  showSearchResults<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onSearch</span><span class="token operator">:</span> <span class="token punctuation">(</span>query<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onSelectResult</span><span class="token operator">:</span> <span class="token punctuation">(</span>result<span class="token operator">:</span> SearchResult<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onClearSearch</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>SearchBar
+  searchQuery<span class="token operator">=</span><span class="token punctuation">{</span>searchQuery<span class="token punctuation">}</span>
+  setSearchQuery<span class="token operator">=</span><span class="token punctuation">{</span>setSearchQuery<span class="token punctuation">}</span>
+  searchResults<span class="token operator">=</span><span class="token punctuation">{</span>searchResults<span class="token punctuation">}</span>
+  showSearchResults<span class="token operator">=</span><span class="token punctuation">{</span>showSearchResults<span class="token punctuation">}</span>
+  onSearch<span class="token operator">=</span><span class="token punctuation">{</span>searchPlaces<span class="token punctuation">}</span>
+  onSelectResult<span class="token operator">=</span><span class="token punctuation">{</span>selectSearchResult<span class="token punctuation">}</span>
+  onClearSearch<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setSearchQuery</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setShowSearchResults</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Features:</strong></p>
+<ul>
+<li><strong>Debounced Input</strong>: 500ms delay before search</li>
+<li><strong>Clear Button</strong>: X icon when text present</li>
+<li><strong>Results Dropdown</strong>: Max 5 results</li>
+<li><strong>Result Item</strong>: Icon, title, subtitle</li>
+</ul>
+<p><strong>UI Layout:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────┐
+│ Search for places    ✕  │
+└─────────────────────────┘
+┌─────────────────────────┐
+│ 📍 DB City Mall         │
+│    Zone-I, Bhopal       │
+├─────────────────────────┤
+│ 📍 New Market           │
+│    MP Nagar, Bhopal     │
+└─────────────────────────┘
+</code></pre><p><strong>Styling:</strong></p>
+<ul>
+<li>Position: Absolute top (iOS: 50px, Android: 20px)</li>
+<li>Background: White with shadow</li>
+<li>Results: Max height 300px, scrollable</li>
+</ul>
+<hr>
+<h3 id="5-directionsmodal">5. DirectionsModal </h3>
+<p><strong>File:</strong> <code>components/maps/DirectionModal.js</code></p>
+<p><strong>Purpose:</strong> Display turn-by-turn navigation instructions.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  showDirectionsModal<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  directions<span class="token operator">:</span> Direction<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  routeInfo<span class="token operator">:</span> RouteInfo <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onClose</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Direction Type:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-type">type</span> <span class="token class-name">Direction</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  instruction<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  distance<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  duration<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>DirectionsModal
+  showDirectionsModal<span class="token operator">=</span><span class="token punctuation">{</span>showDirectionsModal<span class="token punctuation">}</span>
+  directions<span class="token operator">=</span><span class="token punctuation">{</span>directions<span class="token punctuation">}</span>
+  routeInfo<span class="token operator">=</span><span class="token punctuation">{</span>routeInfo<span class="token punctuation">}</span>
+  onClose<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setShowDirectionsModal</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>UI Display:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────┐
+│  Turn-by-Turn Directions│
+│  5.2 km • 25 min        │
+├─────────────────────────┤
+│ 1. Head north on Main St│
+│    200 m • 3 min        │
+├─────────────────────────┤
+│ 2. Turn right onto 2nd  │
+│    500 m • 5 min        │
+└─────────────────────────┘
+</code></pre><hr>
+<h3 id="6-safetyreviewmodal">6. SafetyReviewModal </h3>
+<p><strong>File:</strong> <code>components/maps/SafetyReviewModal.js</code></p>
+<p><strong>Purpose:</strong> Submit safety reviews for locations.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  showReviewModal<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  reviewLocation<span class="token operator">:</span> Coordinate <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onSubmit</span><span class="token operator">:</span> <span class="token punctuation">(</span>lat<span class="token punctuation">,</span> lng<span class="token punctuation">,</span> rating<span class="token punctuation">,</span> comment<span class="token punctuation">,</span> category<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onClose</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>SafetyReviewModal
+  showReviewModal<span class="token operator">=</span><span class="token punctuation">{</span>showReviewModal<span class="token punctuation">}</span>
+  reviewLocation<span class="token operator">=</span><span class="token punctuation">{</span>reviewLocation<span class="token punctuation">}</span>
+  onSubmit<span class="token operator">=</span><span class="token punctuation">{</span>submitSafetyReview<span class="token punctuation">}</span>
+  onClose<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setShowReviewModal</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Form Fields:</strong></p>
+<ul>
+<li><strong>Rating</strong>: 1-5 stars</li>
+<li><strong>Category</strong>: Lighting, Crowd, Crime, Infrastructure</li>
+<li><strong>Comment</strong>: Text input (optional)</li>
+</ul>
+<p><strong>Submission:</strong></p>
+<ul>
+<li>Saves to Firebase Realtime Database</li>
+<li>Updates local state immediately</li>
+<li>Creates dangerous area if rating ≤ 2</li>
+</ul>
+<hr>
+<h3 id="7-loadingoverlay">7. LoadingOverlay </h3>
+<p><strong>File:</strong> <code>components/maps/LoadingOverlay.js</code></p>
+<p><strong>Purpose:</strong> Full-screen loading indicator with message.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  isVisible<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  subMessage<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>LoadingOverlay
+  isVisible<span class="token operator">=</span><span class="token punctuation">{</span>isCalculatingRoute<span class="token punctuation">}</span>
+  message<span class="token operator">=</span><span class="token string">"Finding safest route..."</span>
+  subMessage<span class="token operator">=</span><span class="token string">"Avoiding dangerous areas"</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>UI Display:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────┐
+│                         │
+│         🔄              │
+│                         │
+│  Finding safest route...│
+│  Avoiding dangerous     │
+│  areas                  │
+│                         │
+└─────────────────────────┘
+</code></pre><hr>
+<h3 id="8-navigationheader">8. NavigationHeader </h3>
+<p><strong>File:</strong> <code>components/maps/NavigationHeader.js</code></p>
+<p><strong>Purpose:</strong> Display active navigation info at top of screen.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  isVisible<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  routeInfo<span class="token operator">:</span> RouteInfo <span class="token operator">|</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onStopNavigation</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>NavigationHeader
+  isVisible<span class="token operator">=</span><span class="token punctuation">{</span>isNavigationMode <span class="token operator">&amp;&amp;</span> routeInfo<span class="token punctuation">}</span>
+  routeInfo<span class="token operator">=</span><span class="token punctuation">{</span>routeInfo<span class="token punctuation">}</span>
+  onStopNavigation<span class="token operator">=</span><span class="token punctuation">{</span>stopNavigation<span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>UI Display:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────┐
+│ 🧭 5.2 km • 25 min  [X] │
+│ Safety Score: 4.5/5     │
+└─────────────────────────┘
+</code></pre><hr>
+<h3 id="9-multipleplacesmodal">9. MultiplePlacesModal </h3>
+<p><strong>File:</strong> <code>components/maps/MultiplePlacesModal.js</code></p>
+<p><strong>Purpose:</strong> Show list of nearby places for selection.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  isVisible<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+  places<span class="token operator">:</span> SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  placeType<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onSelectPlace</span><span class="token operator">:</span> <span class="token punctuation">(</span>place<span class="token operator">:</span> SearchResult<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onCancel</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>MultiplePlacesModal
+  isVisible<span class="token operator">=</span><span class="token punctuation">{</span>showMultiplePlacesModal<span class="token punctuation">}</span>
+  places<span class="token operator">=</span><span class="token punctuation">{</span>multiplePlacesList<span class="token punctuation">}</span>
+  placeType<span class="token operator">=</span><span class="token string">"police"</span>
+  onSelectPlace<span class="token operator">=</span><span class="token punctuation">{</span>handleSelectPlaceFromList<span class="token punctuation">}</span>
+  onCancel<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setShowMultiplePlacesModal</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>UI Display:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────┐
+│  Nearby Police Stations │
+├─────────────────────────┤
+│ 🚔 City Police Station  │
+│    0.5 km away          │
+├─────────────────────────┤
+│ 🚔 MP Nagar Police      │
+│    1.2 km away          │
+└─────────────────────────┘
+</code></pre><hr>
+<h2 id="ui-components">UI Components </h2>
+<h3 id="1-themedtext">1. ThemedText </h3>
+<p><strong>File:</strong> <code>components/ThemedText.tsx</code></p>
+<p><strong>Purpose:</strong> Text component with automatic theme support.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  lightColor<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  darkColor<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  type<span class="token operator">?</span><span class="token operator">:</span> <span class="token string">'default'</span> <span class="token operator">|</span> <span class="token string">'title'</span> <span class="token operator">|</span> <span class="token string">'defaultSemiBold'</span> <span class="token operator">|</span> <span class="token string">'subtitle'</span> <span class="token operator">|</span> <span class="token string">'link'</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>TextProps
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>ThemedText type<span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">&gt;</span>SafeRoute<span class="token operator">&lt;</span><span class="token operator">/</span>ThemedText<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>ThemedText type<span class="token operator">=</span><span class="token string">"subtitle"</span><span class="token operator">&gt;</span>Find safer routes<span class="token operator">&lt;</span><span class="token operator">/</span>ThemedText<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>ThemedText<span class="token operator">&gt;</span>Regular text<span class="token operator">&lt;</span><span class="token operator">/</span>ThemedText<span class="token operator">&gt;</span>
+</code></pre><p><strong>Text Types:</strong></p>
+<ul>
+<li><strong>default</strong>: Regular body text (16px)</li>
+<li><strong>title</strong>: Large heading (32px, bold)</li>
+<li><strong>defaultSemiBold</strong>: Semi-bold text (16px, 600)</li>
+<li><strong>subtitle</strong>: Section heading (20px, bold)</li>
+<li><strong>link</strong>: Clickable link (16px, primary color)</li>
+</ul>
+<hr>
+<h3 id="2-themedview">2. ThemedView </h3>
+<p><strong>File:</strong> <code>components/ThemedView.tsx</code></p>
+<p><strong>Purpose:</strong> View component with automatic theme background.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  lightColor<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  darkColor<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>ViewProps
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>ThemedView style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>ThemedText<span class="token operator">&gt;</span>Content<span class="token operator">&lt;</span><span class="token operator">/</span>ThemedText<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ThemedView<span class="token operator">&gt;</span>
+</code></pre><p><strong>Theme Colors:</strong></p>
+<ul>
+<li>Light mode: <code>#FFFFFF</code> (white)</li>
+<li>Dark mode: <code>#151718</code> (dark gray)</li>
+</ul>
+<hr>
+<h3 id="3-haptictab">3. HapticTab </h3>
+<p><strong>File:</strong> <code>components/HapticTab.tsx</code></p>
+<p><strong>Purpose:</strong> Tab bar button with haptic feedback.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  <span class="token function-variable function">onPress</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  onLongPress<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>BottomTabBarButtonProps
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>HapticTab onPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> navigation<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">"Home"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>TabIcon name<span class="token operator">=</span><span class="token string">"home"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>HapticTab<span class="token operator">&gt;</span>
+</code></pre><p><strong>Behavior:</strong></p>
+<ul>
+<li>Triggers light haptic feedback on press</li>
+<li>Works on iOS and Android</li>
+</ul>
+<hr>
+<h3 id="4-iconsymbol">4. IconSymbol </h3>
+<p><strong>File:</strong> <code>components/ui/IconSymbol.tsx</code></p>
+<p><strong>Purpose:</strong> Platform-specific icon rendering.</p>
+<p><strong>Props:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  size<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+  color<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  style<span class="token operator">?</span><span class="token operator">:</span> StyleProp<span class="token operator">&lt;</span>ViewStyle<span class="token operator">&gt;</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Example Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>IconSymbol name<span class="token operator">=</span><span class="token string">"house.fill"</span> size<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">24</span><span class="token punctuation">}</span> color<span class="token operator">=</span><span class="token string">"#f661ab"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>IconSymbol name<span class="token operator">=</span><span class="token string">"map.fill"</span> size<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">28</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><p><strong>Platform Behavior:</strong></p>
+<ul>
+<li>iOS: Uses SF Symbols</li>
+<li>Android/Web: Uses MaterialCommunityIcons</li>
+</ul>
+<hr>
+<h2 id="themed-components">Themed Components </h2>
+<h3 id="color-scheme-hook">Color Scheme Hook </h3>
+<p><strong>File:</strong> <code>hooks/useColorScheme.ts</code></p>
+<p><strong>Purpose:</strong> Detect system theme (light/dark mode).</p>
+<p><strong>Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> useColorScheme <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/hooks/useColorScheme'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">MyComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> colorScheme <span class="token operator">=</span> <span class="token function">useColorScheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> isDark <span class="token operator">=</span> colorScheme <span class="token operator">===</span> <span class="token string">'dark'</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-return">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> 
+      backgroundColor<span class="token operator">:</span> isDark <span class="token operator">?</span> <span class="token string">'#000'</span> <span class="token operator">:</span> <span class="token string">'#fff'</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">&gt;</span>Content<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Returns:</strong> <code>'light' | 'dark' | null</code></p>
+<hr>
+<h3 id="theme-color-hook">Theme Color Hook </h3>
+<p><strong>File:</strong> <code>hooks/useThemeColor.ts</code></p>
+<p><strong>Purpose:</strong> Get color based on current theme.</p>
+<p><strong>Usage:</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> useThemeColor <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/hooks/useThemeColor'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">MyComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> backgroundColor <span class="token operator">=</span> <span class="token function">useThemeColor</span><span class="token punctuation">(</span>
+    <span class="token punctuation">{</span> light<span class="token operator">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span> dark<span class="token operator">:</span> <span class="token string">'#000'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'background'</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-return">return</span> <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> backgroundColor <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>colors</code>: Object with light and dark values</li>
+<li><code>colorName</code>: Key from Colors.ts (fallback)</li>
+</ul>
+<hr>
+<h2 id="global-styles">Global Styles </h2>
+<p><strong>File:</strong> <code>constants/GlobalStyles.js</code></p>
+<p><strong>Purpose:</strong> Shared styling constants across the app.</p>
+<p><strong>Colors:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">primary</span><span class="token operator">:</span> <span class="token string">'#f661ab'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">secondary</span><span class="token operator">:</span> <span class="token string">'#cd43d2'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token string">'#4CAF50'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">danger</span><span class="token operator">:</span> <span class="token string">'#FF4444'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">warning</span><span class="token operator">:</span> <span class="token string">'#FFC107'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">info</span><span class="token operator">:</span> <span class="token string">'#2196F3'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">textPrimary</span><span class="token operator">:</span> <span class="token string">'#212121'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">textSecondary</span><span class="token operator">:</span> <span class="token string">'#757575'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">backgroundLight</span><span class="token operator">:</span> <span class="token string">'#F5F5F5'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">lightGray</span><span class="token operator">:</span> <span class="token string">'#E0E0E0'</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Shadows:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token literal-property property">shadow</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">shadowColor</span><span class="token operator">:</span> <span class="token string">'#000'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shadowOffset</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shadowOpacity</span><span class="token operator">:</span> <span class="token number">0.25</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shadowRadius</span><span class="token operator">:</span> <span class="token number">3.84</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">elevation</span><span class="token operator">:</span> <span class="token number">5</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token literal-property property">shadowSmall</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">shadowColor</span><span class="token operator">:</span> <span class="token string">'#000'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shadowOffset</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shadowOpacity</span><span class="token operator">:</span> <span class="token number">0.18</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shadowRadius</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">elevation</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Container Styles:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token literal-property property">container</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">flex</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">backgroundColor</span><span class="token operator">:</span> <span class="token string">'#FFFFFF'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token literal-property property">loadingContainer</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">flex</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">justifyContent</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">alignItems</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">backgroundColor</span><span class="token operator">:</span> <span class="token string">'#F5F5F5'</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="component-patterns">Component Patterns </h2>
+<h3 id="modal-pattern">Modal Pattern </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>showModal<span class="token punctuation">,</span> setShowModal<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>Modal
+  visible<span class="token operator">=</span><span class="token punctuation">{</span>showModal<span class="token punctuation">}</span>
+  animationType<span class="token operator">=</span><span class="token string">"slide"</span>
+  transparent<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+  onRequestClose<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setShowModal</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>modalContainer<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>modalContent<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span><span class="token comment">/* Modal content */</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span>Button onPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setShowModal</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Close<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Modal<span class="token operator">&gt;</span>
+</code></pre><h3 id="animated-component-pattern">Animated Component Pattern </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> animValue <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Animated</span><span class="token punctuation">.</span><span class="token function">Value</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>current<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">animateIn</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  Animated<span class="token punctuation">.</span><span class="token function">timing</span><span class="token punctuation">(</span>animValue<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    toValue<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    duration<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+    useNativeDriver<span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>Animated<span class="token punctuation">.</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+  transform<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    translateY<span class="token operator">:</span> animValue<span class="token punctuation">.</span><span class="token function">interpolate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      inputRange<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      outputRange<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+  <span class="token punctuation">{</span><span class="token comment">/* Content */</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Animated<span class="token punctuation">.</span>View<span class="token operator">&gt;</span>
+</code></pre><h3 id="list-rendering-pattern">List Rendering Pattern </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>FlatList
+  data<span class="token operator">=</span><span class="token punctuation">{</span>items<span class="token punctuation">}</span>
+  keyExtractor<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> item<span class="token punctuation">.</span>id<span class="token punctuation">}</span>
+  renderItem<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> item <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>TouchableOpacity onPress<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">handleSelect</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">&gt;</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>TouchableOpacity<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">}</span>
+  ListEmptyComponent<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token operator">&lt;</span>Text<span class="token operator">&gt;</span>No items found<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">&gt;</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><hr>
+<h2 id="styling-best-practices">Styling Best Practices </h2>
+<h3 id="1-consistent-spacing">1. Consistent Spacing </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">padding</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">gap</span><span class="token operator">:</span> <span class="token number">12</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="2-border-radius">2. Border Radius </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">borderRadius</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>   <span class="token comment">// Small</span>
+  <span class="token literal-property property">borderRadius</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>  <span class="token comment">// Medium</span>
+  <span class="token literal-property property">borderRadius</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>  <span class="token comment">// Large</span>
+  <span class="token literal-property property">borderRadius</span><span class="token operator">:</span> <span class="token number">24</span>   <span class="token comment">// Extra large</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="3-font-sizes">3. Font Sizes </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>  <span class="token comment">// Small</span>
+  <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>  <span class="token comment">// Body</span>
+  <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>  <span class="token comment">// Default</span>
+  <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>  <span class="token comment">// Subtitle</span>
+  <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>  <span class="token comment">// Heading</span>
+  <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>  <span class="token comment">// Title</span>
+  <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">32</span>   <span class="token comment">// Large title</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="4-font-weights">4. Font Weights </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">fontWeight</span><span class="token operator">:</span> <span class="token string">'400'</span><span class="token punctuation">,</span>  <span class="token comment">// Regular</span>
+  <span class="token literal-property property">fontWeight</span><span class="token operator">:</span> <span class="token string">'500'</span><span class="token punctuation">,</span>  <span class="token comment">// Medium</span>
+  <span class="token literal-property property">fontWeight</span><span class="token operator">:</span> <span class="token string">'600'</span><span class="token punctuation">,</span>  <span class="token comment">// Semi-bold</span>
+  <span class="token literal-property property">fontWeight</span><span class="token operator">:</span> <span class="token string">'700'</span><span class="token punctuation">,</span>  <span class="token comment">// Bold</span>
+  <span class="token literal-property property">fontWeight</span><span class="token operator">:</span> <span class="token string">'800'</span>   <span class="token comment">// Extra bold</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="accessibility">Accessibility </h2>
+<h3 id="screen-reader-support">Screen Reader Support </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>TouchableOpacity
+  accessible<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+  accessibilityLabel<span class="token operator">=</span><span class="token string">"Navigate to home"</span>
+  accessibilityHint<span class="token operator">=</span><span class="token string">"Double tap to go to home screen"</span>
+  accessibilityRole<span class="token operator">=</span><span class="token string">"button"</span>
+<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>Text<span class="token operator">&gt;</span>Home<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>TouchableOpacity<span class="token operator">&gt;</span>
+</code></pre><h3 id="color-contrast">Color Contrast </h3>
+<ul>
+<li>Text on light background: Minimum 4.5:1 ratio</li>
+<li>Text on dark background: Minimum 4.5:1 ratio</li>
+<li>Large text: Minimum 3:1 ratio</li>
+</ul>
+<h3 id="touch-targets">Touch Targets </h3>
+<ul>
+<li>Minimum size: 44x44 points (iOS), 48x48 dp (Android)</li>
+<li>Spacing between targets: Minimum 8 points</li>
+</ul>
+<hr>
+<h2 id="performance-optimization">Performance Optimization </h2>
+<h3 id="1-memoization">1. Memoization </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> MemoizedComponent <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">memo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> data <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-return">return</span> <span class="token operator">&lt;</span>View<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token comment">/* Render data */</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="2-usecallback">2. useCallback </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> handlePress <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Handle press</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>dependencies<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="3-usememo">3. useMemo </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> expensiveValue <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-return">return</span> <span class="token function">computeExpensiveValue</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>data<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="4-flatlist-optimization">4. FlatList Optimization </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token operator">&lt;</span>FlatList
+  data<span class="token operator">=</span><span class="token punctuation">{</span>items<span class="token punctuation">}</span>
+  renderItem<span class="token operator">=</span><span class="token punctuation">{</span>renderItem<span class="token punctuation">}</span>
+  getItemLayout<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    length<span class="token operator">:</span> <span class="token constant">ITEM_HEIGHT</span><span class="token punctuation">,</span>
+    offset<span class="token operator">:</span> <span class="token constant">ITEM_HEIGHT</span> <span class="token operator">*</span> index<span class="token punctuation">,</span>
+    index
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+  removeClippedSubviews<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+  maxToRenderPerBatch<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">}</span>
+  windowSize<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre><hr>
+<p><strong>Last Updated:</strong> 2024<br>
+<strong>Version:</strong> 1.0.0</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
