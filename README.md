@@ -87,6 +87,10 @@ A community-driven safety navigation app that helps users find and navigate safe
 - **Google Cloud Account** (for Maps API)
 - **Twilio Account** (for WhatsApp messaging)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/adf3f23d-4c00-4add-af95-d5623d4558c1" width="45%" height="100%"/>
+  <img src="https://github.com/user-attachments/assets/3a4a84dd-b1ad-44f4-9833-14cc81fc3d91" width="45%" height="100%"/>
+</p>
 ## 🚀 Installation
 
 ### 1. Clone the Repository
